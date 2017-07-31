@@ -1,0 +1,47 @@
+@media (max-width: $media-md-max-width) {	
+	.about .first-screen .content .excerpt {
+		font-size: 18px;
+	}
+}
+@media (max-width: $media-xs-max-width) {		
+	.about { 
+		padding-bottom: 40px;
+	}
+	.about .first-screen {
+		padding-top: 25px;
+	}
+	.about .first-screen .main-title {
+		margin-bottom: 25px;
+	}
+	.about .first-screen .content .excerpt {
+		padding: 30px 10px;
+		text-align: left;
+	}
+	.about .first-screen .content .excerpt:before {
+		display: none;
+	}
+	.about .summary .bottom-part {
+		margin-top: 0;
+	}
+	.about .summary .bottom-part {
+		padding-top: 44px;
+	}
+	.about .certificates .main-title {
+		margin-bottom: 25px;
+	}
+	.about .certificates .wrap-jcarousel {
+		padding-top: 55px;
+	}
+	.about .certificates {
+		padding-bottom: 0;
+	}
+	.about .certificates .wrap-jcarousel .control-panel {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	.about .certificates .wrap-jcarousel .control-panel .jcarousel-next:hover, .about .certificates .wrap-jcarousel .control-panel .jcarousel-prev:hover {
+		@include cros-opacity (1);
+	}
+}

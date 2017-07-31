@@ -1,0 +1,48 @@
+@media (max-width: $media-md-max-width) {
+	.shop .filters .item ul {
+		margin-top: -53px;
+	}
+}
+@media (max-width: $media-xs-max-width) {	
+	.shop .woocommerce-pagination {
+		text-align: center;
+	}
+	.shop .filters {
+		margin-bottom: 40px;
+	}
+	.shop-top-panel {
+		margin: 0 0 28px;
+	}
+	.shop-top-panel .woocommerce-breadcrumb .item {
+		display: none;
+	}
+	.shop .ordering a {
+		margin: 0 2px;
+	}
+	
+	.shop .filters .item {
+		display: block;
+		position: relative;
+		margin: 0 0 20px;
+	}
+	
+	.shop .filters .item ul li a {
+		font-size: 14px;
+	}
+	.shop .filters .item ul {
+		min-width: auto;
+		width: 100%;
+		margin-top: -52px;
+	}
+	.shop .filters .item ul li {
+		padding: 0 10px 0 40px;
+	}
+	.shop .filters .item ul li:before {
+		left: 12px;
+		top: 9px;
+	}
+	.shop .filters .item .title {
+		display: block;
+		font-size: 15px;
+	}
+}

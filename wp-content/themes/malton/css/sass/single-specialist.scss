@@ -1,0 +1,190 @@
+.single-specialist .first-screen {
+	height: 600px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-box-shadow: inset 0px -50px 270px 0px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:    inset 0px -50px 270px 0px rgba(0, 0, 0, 0.5);
+	box-shadow:         inset 0px -50px 270px 0px rgba(0, 0, 0, 0.5);
+}
+.single-specialist .first-screen .wrap-btn-menu {
+	
+}
+.single-specialist .first-screen .top-part .wrap-btn-menu {
+	padding: 55px 0 0 30px;
+	position: relative;
+}
+.single-specialist .first-screen .top-part .wrap-btn-menu.active {
+	@include cros-opacity(0);
+}
+.single-specialist .wrap-btn-menu .btn-menu.switch-menu-specialists {
+	position: relative;
+	font-weight: 700;
+	color: #fff;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+.single-specialist .wrap-btn-menu .btn-menu.switch-menu-specialists {
+	@include menu-icon(#fff);
+}
+.single-specialist .wrap-btn-menu.active .btn-menu.switch-menu-specialists {
+	@include close-menu-icon();
+}
+
+
+.single-specialist .first-screen .top-part .first-info {
+	padding: 180px 0 0 30px;
+}
+
+.single-specialist .first-screen .top-part .first-info .title {
+	color: #fff;
+}
+
+.single-specialist .first-screen .top-part .first-info .specialization {
+	color: #fff;
+}
+
+.single-specialist .first-screen .top-part .first-info .more {
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px dashed #fff;
+}
+
+
+
+.single-specialist .wrap-menu {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.single-specialist .wrap-menu .close-area {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.single-specialist .wrap-menu .menu {
+	display: block;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: 500px;
+	height: 100%;
+	background: rgba(59, 68, 68, 0.95);
+	top: 0;
+	left: 0;
+	text-transform: uppercase;
+	padding: 155px 0 0 188px;
+}
+.single-specialist .wrap-menu .menu a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 25px;
+	background-position: left bottom;	
+	@include animation-transition (0.2s);	
+}
+.single-specialist .wrap-menu .menu a:hover {
+	color: #C7E6E8;
+}
+
+.single-specialist .wrap-menu .menu .switch-menu-specialist {
+	position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+
+
+
+.single-specialist .content {
+	position: relative;
+	background: #fff;
+	padding: 20px 0 20px;
+	margin: 0px 0 26px;
+}
+.single-specialist .content .more-arrow {
+	position: absolute;
+	top: -70px;
+	right: 50%;
+	@include bottom-arrow (2px, 15px, 15px, #fff);
+}
+.single-specialist .content .next-post {
+	position: absolute;
+	top: -70px;
+	right: 30px;
+	width: 90px;
+	height: 22px;
+	background: url(../img/long-arrow-white.png) right top no-repeat;
+}
+.single-specialist .content .next-post:hover {
+	@include cros-opacity (0.7);
+}
+.single-specialist .content .prev-post:hover {
+	@include cros-opacity (0.7);
+}
+.single-specialist .content .next-post:hover {
+	background-position: right bottom;
+}
+.single-specialist .content .prev-post {
+	position: absolute;
+	top: -70px;
+	left: 30px;
+	width: 90px;
+	height: 22px;
+	background: url(../img/long-arrow-white.png) left top no-repeat;
+}
+.single-specialist .content .prev-post:hover {
+	background-position: left bottom;
+}
+.single-specialist .content .text {
+	padding: 88px 0 0;
+}
+.single-specialist .content .text p {
+	margin: 0 0 20px;
+}
+.single-specialist .content .text .indent {	
+	padding: 0 26px 0 70px;
+}
+.single-specialist .content .text .alignleft {
+	float: left;
+	text-align: center;
+}
+.single-specialist .content .text .alignright {
+	float: right;
+	text-align: center;
+}
+.single-specialist .content .text .noindent {
+	padding: 10px 0 18px;
+}
+.single-specialist .content .text .wp-caption-text {
+	font-style: italic;
+}
+
+.single-specialist .wrap-form {
+	background: #F7F9FA;
+	padding: 98px 0 70px;
+    margin: 0 0 95px;
+}
+
+.single-specialist .wrap-form .title {
+	text-align: center;
+	margin: 0 0 56px;
+}
+.single-specialist .wrap-form .btn {
+	border-width: 2px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1.9px;
+    padding: 0 0 0;
+	height: 80px;
+}

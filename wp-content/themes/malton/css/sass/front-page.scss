@@ -1,0 +1,452 @@
+.front-page {
+	padding-bottom: 92px;
+}
+
+
+
+.front-page-first-screen {
+	position: relative;
+	color: #fff;
+	padding: 43px 0 0;
+	overflow: hidden;
+}
+.is-tablet .front-page-first-screen {
+	padding-bottom: 100px;
+}
+.front-page-first-screen .bg {
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+	left: 0;
+	/*background: url(../img/front-page-first-screen-bg.png) center center no-repeat;
+	background-size: cover;*/
+	overflow: hidden;
+}
+.is-phone .front-page-first-screen .bg, .is-tablet .front-page-first-screen .bg {
+	position: absolute;
+}
+.front-page-first-screen .bg:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.25);
+}
+.front-page-first-screen .bg .gallery {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: 100%;
+	height: 100%;
+}
+.front-page-first-screen .bg .gallery li {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	background-position: center top;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	@include cros-opacity (0);
+	
+	-webkit-transition: transform 9s ease-out 0s, opacity 1s ease-out 0s;
+     -moz-transition: transform 9s ease-out 0s, opacity 1s ease-out 0s;
+     -o-transition: transform 9s ease-out 0s, opacity 1s ease-out 0s;
+     transition: transform 9s ease-out 0s, opacity 1s ease-out 0s;
+	 
+	@include cros-transform (scale(1.4));
+}
+.front-page-first-screen .bg .gallery li:nth-child(even) {
+	@include cros-transform (scale(1));
+}
+.front-page-first-screen .bg .gallery li.active {
+	@include cros-opacity (1);	
+}
+.front-page-first-screen .bg .gallery li.active.start-anim {
+	@include cros-transform (scale(1.2));
+}
+
+.front-page-first-screen .bg video {
+	min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.front-page-first-screen .top-part {
+	margin-bottom: 200px;	
+}
+.is-tablet .front-page-first-screen .top-part {
+	margin-bottom: 50px;	
+}
+.front-page-first-screen .top-part .logo {
+	display: inline-block;
+	width: 262.5px;
+	height: 70px;
+	background: url(../svg/logo.svg) center top no-repeat;
+	background-size: 100% auto;
+}
+.front-page-first-screen .top-part .contact-info {
+	text-align: right;
+	padding-right: 40px;
+}
+.front-page-first-screen .top-part .contact-info span {
+	font-size: 30px;
+	font-weight: 300;
+}
+.front-page-first-screen .top-part .wrap-btn-menu {
+	position: relative;
+	z-index: 5;
+	padding: 4px 0 0 30px;
+}
+.front-page-first-screen .top-part .wrap-btn-menu .btn-menu {
+	position: relative;
+	font-weight: 700;
+	color: #fff;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+.front-page-first-screen .top-part .wrap-btn-menu .btn-menu {
+	@include menu-icon(#fff);
+}
+.front-page-first-screen .top-part .wrap-btn-menu.show .btn-menu {
+	@include close-menu-icon();
+}
+
+
+.front-page-first-screen .middle-part {
+	position: relative;
+}
+
+.front-page-first-screen .middle-part .text {
+	font-size: 44px;
+	font-weight: 300;
+	line-height: 59px;
+	text-align: center;
+}
+.front-page-first-screen .middle-part .separate {
+	height: 20px;
+	margin: 31px 0 35px;
+	background: url(../img/separate.png) top center no-repeat;
+}
+.front-page-first-screen .middle-part .wrap-btn {
+	margin: 0 0 41px;
+}
+.front-page-first-screen .btn.btn-green {	
+	padding: 16px 0 15px;
+	background: rgba(241, 223, 213, 0.75);
+	border-color: rgba(241, 223, 213, 0.75);
+	font-size: 26px;
+	letter-spacing: 3.5px;
+}
+.front-page-first-screen .btn.btn-green:hover {
+	background: rgba(241, 223, 213, 1);	
+}	
+.front-page-first-screen .wrap-bottom-mobile {	
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.front-page-first-screen .middle-part .social {
+	text-align: center;
+}
+.front-page-first-screen .middle-part .social a {
+	font-size: 30px;
+	color: rgba(255, 255, 255, 0.75);
+	margin: 0 16px;
+}
+.front-page-first-screen .middle-part .social a:hover {
+	color: #27aae1;
+}
+
+
+.front-page-first-screen .middle-part .social a:hover .fa-facebook {
+	color: #365899;
+}
+.front-page-first-screen .middle-part .social a:hover .fa-vk {
+	color: #507299;
+}
+.front-page-first-screen .middle-part .social a:hover .fa-twitter {
+	color: #1DA1F2;
+}
+.front-page-first-screen .middle-part .social a:hover .fa-instagram {
+	color: #262626;
+}
+.front-page-first-screen .middle-part .social a:hover .fa-youtube-play {
+	color: #cc181e;
+}
+
+
+
+.front-page-first-screen .wrap-next-screen {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	left: 0;
+	bottom: 50px;
+	width: 100%;
+}
+.front-page-first-screen .wrap-next-screen .next-screen {
+	display: inline-block;
+	@include bottom-arrow (2px, 16px, 16px, #fff);
+}
+
+
+
+.first-screen-wrap-menu {
+	position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.first-screen-wrap-menu .close-area {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.first-screen-wrap-menu ul {
+	display: block;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: 300px;
+	background: rgba(59, 68, 68, 0.5);
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-transform: uppercase;
+	padding: 240px 0 0 40px;
+}
+.is-phone .first-screen-wrap-menu ul {
+	background: #EEF2F3;
+}
+.first-screen-wrap-menu ul li a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 50px;
+	background-position: left bottom;	
+	@include animation-transition (0.2s);	
+}
+.is-phone .first-screen-wrap-menu ul li a {
+	color: #7B8586;
+}
+.first-screen-wrap-menu ul li a:hover {
+	padding-left: 60px;
+	color: #C2D1BC;
+	background: url(../img/icon-menu-item.png) left center no-repeat;	
+}
+
+
+
+
+
+.front-page .block-products .main-title {
+	text-align: center;
+}
+.front-page .block-products {
+	@include products();
+}
+.front-page .block-products ul {
+	padding-top: 60px;
+}
+.front-page .list-actions {
+	background: url(../img/list-actions-right-bg.png) right top repeat-y;
+	@include animation-transition (0.5s);
+}
+.is-phone .front-page .list-actions {
+	background: none;
+}
+.front-page .list-actions .left-bg {
+	padding: 184px 0 127px;
+	background: url(../img/list-actions-left-bg.png) left top repeat-y;
+	@include animation-transition (0.5s);
+}
+.is-phone .front-page .list-actions .left-bg {
+	background: none;
+}
+.front-page .list-actions .item {
+	margin-bottom: 154px;
+}
+.front-page .list-actions .left-bg .container .item:last-child {
+	margin-bottom: 0;
+}
+.front-page .list-actions .img {
+	display: block !important;
+	position: relative;
+	text-align: center;
+	margin: 0 90px 0 -30px;
+	left: 0 !important;
+	@include animation-transition (0.5s);
+	
+}
+.front-page .list-actions .img img {
+	max-width: 100%;
+}
+.front-page .list-actions .text-part {
+	display: block !important;
+	position: relative;
+	padding-top: 28px;
+	margin-bottom: 23px;
+	left: 0 !important;
+	@include animation-transition (0.5s);
+}
+.front-page .list-actions .text-part .title {
+	line-height: 58px;
+    margin-bottom: 23px;
+}
+.front-page .list-actions .text-part .more {
+	display: inline-block;
+	width: 90px;
+	height: 22px;
+	background: url(../img/more.png) left top no-repeat;
+	margin: 34px 0 0;
+}
+.front-page .hot-hours {
+	background: #EEF2F3;
+	margin: 0 0 164px;
+}
+.front-page .hot-hours .text-block {
+    padding-top: 77px;
+	padding-bottom: 86px;
+}
+.front-page .hot-hours .text-block .title {
+	line-height: 58px;
+	margin-bottom: 40px;
+	margin-bottom: 10px;
+}
+.front-page .hot-hours .text-block .date {
+	margin-top: 12px;
+}
+.front-page .hot-hours .text-block .date span {
+	color: #3B4444;
+}
+.front-page .hot-hours .text-block .discount {
+	margin-top: 12px;
+}
+.front-page .hot-hours .text-block .discount span {
+	color: #3B4444;
+	font-weight: 600;
+}
+.front-page .hot-hours .wrap-jcarousel .jcarousel > ul > li {
+	overflow: hidden;
+	height: 500px;
+}
+.front-page .hot-hours .wrap-jcarousel .jcarousel {
+	height: 500px;
+}
+.front-page .hot-hours .timer-block {
+	position: relative;
+}
+.front-page .hot-hours .timer-block img {
+	height: 100%;
+	@include cros-opacity (0.35);
+}
+
+.front-page .hot-hours .timer-block .inner {
+	position: absolute;
+	display: table;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+    left: 0;
+}
+.front-page .hot-hours .timer-block .countdown-text {
+	font-size: 25px;
+	color: #3B4444;
+	margin-bottom: 10px;
+	
+}
+.front-page .hot-hours .timer-block .countdown {
+	margin-bottom: 25px;
+}
+.front-page .hot-hours .timer-block .countdown .wrap-num {
+	display: inline-block;
+	color: #3B4444;
+	letter-spacing: -2.7px;
+}
+.front-page .hot-hours .timer-block .countdown .wrap-num .num {
+	font-size: 96px;
+	line-height: 96px;
+	font-weight: 300;
+}
+.front-page .hot-hours .timer-block .countdown .wrap-num .num-name {
+	font-size: 25px;
+}
+.front-page .hot-hours .timer-block .btn {
+	width: 370px;
+}
+.front-page .hot-hours .wrap-jcarousel {
+	position: relative;
+}
+.front-page .hot-hours .wrap-jcarousel .control-panel {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	width: 8.33333333%;
+	text-align: center;
+}
+.front-page .hot-hours .wrap-jcarousel .control-panel .jcarousel-prev {
+	display: inline-block;
+	@include top-arrow (2px, 16px, 16px, #CCD9DA);
+	@include animation-transition (0.5s);
+}
+.front-page .hot-hours .wrap-jcarousel .control-panel .jcarousel-prev.inactive {	
+	@include cros-opacity (0);
+}
+.front-page .hot-hours .wrap-jcarousel .control-panel .jcarousel-next {
+	display: inline-block;
+	@include bottom-arrow (2px, 16px, 16px, #CCD9DA);
+	@include animation-transition (0.5s);
+}
+.front-page .hot-hours .wrap-jcarousel .control-panel .jcarousel-next.inactive {	
+	@include cros-opacity (0);
+}
+.front-page .hot-hours .wrap-jcarousel .control-panel .jcarousel-pagination {
+	width: 20px;
+	margin: 0 auto;
+	line-height: 20px;
+}
+.front-page .hot-hours .wrap-jcarousel .control-panel .jcarousel-pagination a {
+	display: inline-block;
+	padding: 4px;
+	border: 1px solid transparent;
+	@include border-radius (50%);
+}
+.front-page .hot-hours .wrap-jcarousel .control-panel .jcarousel-pagination a.active {
+	border-color: #3B4444;
+}
+.front-page .hot-hours .wrap-jcarousel .control-panel .jcarousel-pagination a:before {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: #CCD9DA;
+	@include border-radius (50%);
+}
+.front-page .hot-hours .wrap-jcarousel .control-panel .jcarousel-pagination a.active:before {
+	background: #88C9CD;
+}

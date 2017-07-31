@@ -1,0 +1,34 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	line-height: 40px;
+	color: $main-color;
+	background: #fff;	
+	//background: url(../img/template-main.png) center -66px no-repeat #fff;
+	//height: 5000px;
+}
+a {
+	color: $a-color;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+	color: $a-color;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+	padding-bottom: 110px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+	padding-top: 38px;
+}
+
+
+
+

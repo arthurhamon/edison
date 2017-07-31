@@ -1,0 +1,110 @@
+.gallery-collage {
+	position: relative;
+	padding: 0 0 5px;
+}
+.gallery-collage .jcarousel {
+	background: #fff;
+	padding: 0 2.5px;
+}
+.gallery-collage .jcarousel ul {
+}
+.gallery-collage .jcarousel ul li {
+	display: block;
+	padding: 2.5px 0;
+	width: 690px;
+}
+.gallery-collage .jcarousel ul li .item {
+	display: block;
+	padding: 2.5px;
+	float: left;
+}
+
+.gallery-collage .jcarousel ul .item.big-item {
+	width: 66.666667%;
+}
+.gallery-collage .jcarousel ul .item.small-item {
+	width: 33.333333%;
+}
+.gallery-collage .jcarousel ul .item.item img {
+	display: block;
+	width: 100%;
+}
+
+
+.gallery-collage .jcarousel-prev {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100px;
+	background: rgba(255, 255, 255, 0.5);
+	@include cros-opacity (0);
+	@include animation-transition(0.5s);
+}
+.gallery-collage:hover .jcarousel-prev.inactive {
+	cursor: default;
+	@include cros-opacity (0);
+}
+.gallery-collage:hover .jcarousel-prev {
+	@include cros-opacity (1);
+}
+.gallery-collage .jcarousel-prev:hover {
+	background: rgba(186, 217, 122, 0.75);
+}
+.gallery-collage .jcarousel-prev:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -10px 0 0 -10px;
+	@include left-arrow(1px, 21px, #526262);
+}
+
+
+.gallery-collage .jcarousel-next {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100px;
+	background: rgba(255, 255, 255, 0.5);
+	@include cros-opacity (0);
+	@include animation-transition(0.5s);
+}
+.gallery-collage:hover .jcarousel-next.inactive {
+	cursor: default;
+	@include cros-opacity (0);
+}
+.gallery-collage:hover .jcarousel-next {
+	@include cros-opacity (1);
+}
+.gallery-collage .jcarousel-next:hover {
+	background: rgba(186, 217, 122, 0.75);
+}
+.gallery-collage .jcarousel-next:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	margin: -10px -10px 0 0;
+	@include right-arrow(1px, 21px, #526262);
+}
+
+.gallery-collage .jcarousel-scroll-pagination {
+	position: absolute;
+	height: 5px;
+	background: #ebefe4;
+	overflow: hidden;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+}
+
+.gallery-collage .jcarousel-scroll-pagination .jcarousel-slider {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: $a-color;
+	height: 100%;
+	@include animation-transition(0.5s);
+}

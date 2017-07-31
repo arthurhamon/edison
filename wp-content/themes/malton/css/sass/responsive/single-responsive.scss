@@ -1,0 +1,31 @@
+@media (max-width: $media-xs-max-width) {	
+	.single-blog .text {
+		padding-top: 0;
+	}
+	.single-blog .text .wp-caption.alignleft {
+		float: none;
+		width: 100% !important;
+	}
+	.single-blog .text .wp-caption.alignleft img {
+		width: 100% !important;
+		height: auto !important;
+	}
+	.single-blog .text .wp-caption.alignright {
+		float: none;
+		width: 100% !important;
+	}
+	.single-blog .text .wp-caption.alignright img {
+		width: 100% !important;
+		height: auto !important;
+	}
+	.single-blog .comment-list .item {
+		padding: 10px;
+	}
+	.single-blog .comment-list li .children {
+		padding-left: 0;
+	}
+	.single-blog .text table {
+		font-size: 13px;
+		line-height: 20px;
+	}
+}

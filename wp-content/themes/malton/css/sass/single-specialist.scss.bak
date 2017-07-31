@@ -1,0 +1,59 @@
+.single-specialist .first-screen {
+	height: 300px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.single-specialist .content {
+	padding: 57px 0 0;
+	margin: 0 0 26px;
+}
+.single-specialist .content .title {
+	text-align: center;
+	margin: 0 0 3px;
+}
+.single-specialist .content .specialization {
+	text-align: center;
+}
+.single-specialist .content .text {
+	padding: 88px 0 0;
+    line-height: 40px;
+}
+.single-specialist .content .text p {
+	margin: 0 0 20px;
+}
+.single-specialist .content .text .indent {	
+	padding: 0 26px 0 70px;
+}
+.single-specialist .content .text .alignleft {
+	float: left;
+	text-align: center;
+}
+.single-specialist .content .text .alignright {
+	float: right;
+	text-align: center;
+}
+.single-specialist .content .text .noindent {
+	padding: 10px 0 18px;
+}
+.single-specialist .content .text .wp-caption-text {
+	font-style: italic;
+}
+
+.single-specialist .wrap-form {
+	background: #F7F9FA;
+	padding: 98px 0 10px;
+}
+
+.single-specialist .wrap-form .title {
+	text-align: center;
+	margin: 0 0 56px;
+}
+.single-specialist .wrap-form .btn {
+	border-width: 2px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1.9px;
+    padding: 20px 0 0;
+	height: 80px;
+}

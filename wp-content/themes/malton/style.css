@@ -1,0 +1,45 @@
+/*
+Theme Name: malton
+Theme URI: 
+Author: Roman
+Author URI: 
+Description: malton site
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: malton-template
+*/
+
+
+/*КАСТОМНЫЕ СТИЛИ ДЛЯ БЛОГА*/
+
+.block {display:block;}
+.inline-block {display:inline-block;}
+.alignleft {margin:15px 15px 0 0;}
+.alignright{margin-left:15px 0 0 15px;}
+.aligncenter, .alignnone{margin:15px auto;}
+.single-blog .text .aligncenter img {height:auto;}
+.fullwidth {width:100% !important; height:auto !important;}
+
+blockquote {
+    position: relative;
+    font-size: inherit;
+    font-style: italic;
+    text-align: left;
+    background: #F7F9FA;
+    padding: 60px 60px 60px 80px;
+    margin: 30px 0 31px;
+    border: none;
+}
+
+blockquote:before {
+    position: absolute;
+    top: 20px;
+    left: -55px;
+    content: "\201c";
+    font-family: georgia;
+    font-style: italic;
+    font-size: 200px;
+    line-height: 200px;
+    color: #C2D1BC;
+}

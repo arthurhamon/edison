@@ -1,0 +1,21 @@
+@media (max-width: $media-xs-max-width) {	
+	.single-specialist .content .text .indent {
+		padding: 0;
+	}
+	.single-specialist .content .prev-post {
+		top: auto;
+		left: 20px;
+		background: url(../img/long-arrow.png) left -3px no-repeat;
+		margin-top: 25px;
+		height: 16px;
+		width: 60px;
+	}
+	.single-specialist .content .next-post {
+		top: auto;
+		right: 20px;
+		background: url(../img/long-arrow.png) right -3px no-repeat;
+		margin-top: 25px;
+		height: 16px;
+		width: 60px;
+	}
+}

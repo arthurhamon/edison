@@ -1,0 +1,150 @@
+@media (max-width: $media-md-max-width) {
+
+	.front-page-first-screen .middle-part .text {
+		font-size: 36px;
+		line-height: 44px;
+	}
+	.front-page-first-screen .top-part .contact-info span {
+		font-size: 22px;
+		font-weight: 300;
+	}
+	.front-page-first-screen .btn.btn-green {
+		font-size: 22px;
+		padding: 8px 0 9px;
+	}
+	.front-page-first-screen .middle-part .social a {
+		font-size: 22px;
+	}
+	.front-page .list-actions .item {
+		margin-bottom: 110px;
+	}
+	.front-page .list-actions .left-bg {
+		padding-bottom: 75px;
+	}
+	.front-page .list-actions .text-part .title {
+		line-height: 36px;
+	}
+	.front-page .hot-hours .text-block .title {
+		line-height: 36px;
+	}
+	.front-page .hot-hours .wrap-jcarousel .jcarousel {
+		height: 370px;
+	}
+	.front-page .hot-hours .wrap-jcarousel .jcarousel > ul > li {
+		height: 370px;
+	}
+	.front-page .hot-hours .timer-block .countdown-text {
+		font-size: 20px;
+	}
+	.front-page .hot-hours .timer-block .countdown .wrap-num .num {
+		font-size: 72px;
+	}
+	.front-page .hot-hours .timer-block .countdown .wrap-num .num-name {
+		font-size: 20px;
+	}
+	.front-page .hot-hours .timer-block .btn {
+		width: 264px;
+	}
+	.front-page .block-products ul {
+		padding-top: 10px;
+	}
+}
+@media (max-width: $media-xs-max-width) {
+	.first-screen-wrap-menu ul {
+		width: 100%;
+		padding: 99px 0 0;
+		text-align: center;
+	}
+	.front-page-first-screen .top-part .wrap-btn-menu {
+		padding: 0;
+	}
+	.front-page-first-screen {
+		padding-top: 14px;
+	}
+	.front-page-first-screen .top-part .logo {
+		width: 150px;
+		height: 40px;
+		margin: 115px 0 25px;
+	}
+	.front-page-first-screen .top-part {
+		margin-bottom: 25px;
+	}
+	.front-page-first-screen .middle-part .social a {
+		margin: 0 10px;
+	}
+	.front-page-first-screen .top-part .contact-info {
+		text-align: center;
+		padding: 0;
+	}
+	.front-page-first-screen .wrap-next-screen {
+		bottom: 80px;
+	}
+	.front-page .list-actions .img {
+		margin: 0;
+	}
+	.front-page .list-actions .left-bg {
+		padding-top: 30px;
+		padding-bottom: 0;
+		background: none;
+	}
+	.front-page .list-actions .item {
+		margin-bottom: 0;
+	}
+	.front-page .hot-hours {
+		margin-bottom: 35px;
+	}
+	.front-page .hot-hours .wrap-jcarousel .jcarousel {
+		height: auto;
+	}
+	.front-page .hot-hours .wrap-jcarousel .jcarousel > ul > li { 
+		height: auto;
+	}
+	.front-page .hot-hours .wrap-jcarousel .control-panel {
+		top: 30px;
+		height: auto;
+		width: 100%;
+	}
+	.front-page .hot-hours .wrap-jcarousel .control-panel .jcarousel-pagination {
+		display: inline-block;
+		width: auto;
+	}
+	.front-page .hot-hours .wrap-jcarousel .control-panel .jcarousel-pagination a {
+		margin: 0 5px;
+	}
+	
+	.front-page .hot-hours .wrap-jcarousel .control-panel .jcarousel-next {	
+		position: relative;
+		top: -2px;	
+		@include right-arrow (2px, 16px, 16px, #CCD9DA);
+	}
+	
+	.front-page .hot-hours .wrap-jcarousel .control-panel .jcarousel-prev {		
+		position: relative;
+		top: -2px;
+		@include left-arrow (2px, 16px, 16px, #CCD9DA);
+	}
+	.front-page .hot-hours .text-block {
+		padding-bottom: 50px;
+	}
+	.front-page .hot-hours .text-block .title {
+		text-align: center;
+	}
+	.front-page .hot-hours .text-block .text {
+		text-align: center;
+	}
+	.front-page .hot-hours .text-block .date {
+		text-align: center;
+	}
+	.front-page .hot-hours .text-block .discount {
+		text-align: center;
+	}
+	
+	.front-page .hot-hours .text-block .btn {
+		margin-top: 25px;
+	}
+	
+	.first-screen-wrap-menu ul li a:hover {
+		background: none;
+		padding-left: 0;
+	}
+}

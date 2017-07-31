@@ -1,0 +1,123 @@
+.contacts {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.contacts .right-part {
+	position: absolute;
+	padding: 0 0 0 420px;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;	
+	z-index: 1;
+}
+.contacts .right-part .wrap-map {
+	position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+.contacts .right-part .wrap-map #map {
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
+}
+
+
+.contacts .left-part {
+	position: absolute;
+	width: 420px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding: 20px 10px;
+	z-index: 2;
+}
+.contacts .contact-info {
+	margin-bottom: 20px;
+}
+.contacts .contact-info .inner {
+	position: relative;
+	background: #fff;
+	text-align: center;
+	border: 1px solid #64828c;
+	padding: 33px 0 44px;
+}
+.contacts .contact-info .inner .border {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 10px 10px;
+    top: 0;
+    left: 0;
+}
+.contacts .contact-info .inner .border:before {
+	content: '';
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #d2dce1;
+}
+.contacts .contact-info .inner .front {
+	position: relative;
+}
+.contacts .contact-info .inner .title {
+	font-size: 22px;
+	line-height: 35px;
+	color: #4b5a5f;
+	text-transform: uppercase;
+	font-weight: 300;
+	margin: 0 0 5px;
+	letter-spacing: 1px;
+}
+.contacts .contact-info .inner .phones {
+	padding: 10px 0 0;
+	font-size: 20px;
+	line-height: 35px;
+	color: #64828c;
+	padding: 6px 0 0;
+}
+
+
+
+.contacts .form .inner {
+	position: relative;
+	border: 1px solid #64828c;
+	padding: 49px 0 29px;
+	background: #fff;
+}
+.contacts .form .inner .border {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 10px 10px;
+    top: 0;
+    left: 0;
+}
+.contacts .form .inner .border:before {
+	content: '';
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #d2dce1;
+}
+.contacts .form .inner .front {
+	position: relative;    
+	padding: 0 49px 0 47px;	
+}
+.contacts .form .inner .front .form-control {
+	height: 30px;
+	border: 1px solid #d2dce1;
+}
+.contacts .form .inner .front label {
+	font-weight: 400;
+}
+.contacts .form .inner .front textarea.form-control {
+	resize: vertical;
+	min-height: 60px;
+}

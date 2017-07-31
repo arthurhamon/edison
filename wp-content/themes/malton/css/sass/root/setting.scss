@@ -1,0 +1,148 @@
+/* {
+	-webkit-transition: all 0.5s ease-out 0s;
+     -moz-transition: all 0.5s ease-out 0s;
+     -o-transition: all 0.5s ease-out 0s;
+     transition: all 0.5s ease-out 0s;
+}*/
+$a-color: #88C9CD;
+$a-color2: #769769;
+$main-color: #7B8586;
+$main-bg: #fff;
+
+$media-md-max-width: 1299px;
+$media-xs-max-width: 768px;
+
+
+@mixin right-arrow ($border_width, $pxwidth, $pxheight, $color) {
+	width: $pxwidth;
+    height: $pxheight;
+	-moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+	border-bottom: none;
+    border-top: $border_width solid $color;
+    border-right: $border_width solid $color;
+	border-left: none;
+}
+@mixin left-arrow ($border_width, $pxwidth, $pxheight, $color) {
+	width: $pxwidth;
+    height: $pxheight;
+	-moz-transform:    rotate(-45deg);
+	-o-transform:      rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	transform:         rotate(-45deg);
+	border-bottom: none;
+	border-top: $border_width solid $color;
+	border-left: $border_width solid $color;
+	border-right: none;
+}
+
+@mixin top-arrow ($border_width, $pxwidth, $pxheight, $color) {
+	width: $pxwidth;
+    height: $pxheight;
+	-moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+	border-bottom: none;
+	border-top: $border_width solid $color;
+	border-left: $border_width solid $color;
+	border-right: none;
+}
+
+@mixin bottom-arrow ($border_width, $pxwidth, $pxheight, $color) {
+	width: $pxwidth;
+    height: $pxheight;
+	-moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+	border-top: none;
+	border-bottom: $border_width solid $color;
+	border-left: $border_width solid $color;
+	border-right: none;
+}
+@mixin animation-transition ($speed) {
+	-webkit-transition: all $speed ease-out 0s;
+     -moz-transition: all $speed ease-out 0s;
+     -o-transition: all $speed ease-out 0s;
+     transition: all $speed ease-out 0s;
+}
+@mixin cros-opacity ($val) {
+	-moz-opacity: $val; /* Mozilla 1.6 и ниже */
+	-khtml-opacity: $val; /* Konqueror 3.1, Safari 1.1 */
+	opacity: $val; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9+, Chrome 5+, IE 9+ */
+}
+@mixin border-radius ($val) {
+	-moz-border-radius: $val; /* Firefox */
+	-webkit-border-radius: $val; /* Safari, Chrome */
+	-khtml-border-radius: $val; /* KHTML */
+	border-radius: $val; /* CSS3 */
+}
+@mixin cros-transform ($val) {
+	-moz-transform: $val; /* Для Firefox */
+	-ms-transform: $val; /* Для IE */
+	-webkit-transform: $val; /* Для Safari, Chrome, iOS */
+	-o-transform: $val; /* Для Opera */
+	transform: $val;
+}
+@mixin menu-icon ($color) {
+	.icon {
+		position: relative;
+		display: inline-block;
+		height: 14px;
+		width: 16px;
+		margin: 0 13px 0 0;
+	}
+	.icon:before {
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: $color;
+		@include animation-transition (0.3s);
+	}
+	.icon:after {
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		background: $color;
+		@include animation-transition (0.3s);
+	}
+	.icon .middle-line {
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		top: 50%;
+		left: 0;
+		background: $color;
+		margin-top: -1px;	
+	}
+}
+@mixin close-menu-icon () {	
+	
+	
+	.icon:before {
+		-moz-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		top: 6px;
+	}
+	.icon:after {
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		bottom: 6px;
+	}
+	.icon .middle-line {
+		@include cros-opacity (0);
+	}
+}

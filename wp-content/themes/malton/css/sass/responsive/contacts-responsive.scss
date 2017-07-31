@@ -1,0 +1,19 @@
+@media (max-width: $media-xs-max-width) {
+	.contacts {
+		position: relative;
+		padding-top: 0;
+	}
+	.contacts #map {
+		position: relative !important;
+		width: 100% !important;
+		height: 200px !important;
+		margin-bottom: 20px;
+	}
+	.contacts .inner {
+		position: relative;
+		top: auto;
+		width: 100%;
+		left: auto;
+		height: auto;
+	}
+}

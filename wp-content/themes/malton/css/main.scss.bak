@@ -1,0 +1,29 @@
+//Функции и переменные
+@import 'sass/root/setting';
+//Вспомогательные стили для верстки 
+@import 'sass/root/addition-bootstrap';
+//Основные стили для fancybox
+@import 'sass/root/fancybox';
+
+//Основные стили темы
+@import 'sass/root/base';
+//Стили темы
+@import 'sass/template';
+@import 'sass/shop';
+@import 'sass/front-page';
+@import 'sass/single-product';
+@import 'sass/services';
+@import 'sass/single-specialist';
+@import 'sass/blog';
+@import 'sass/single';
+@import 'sass/cart';
+@import 'sass/about';
+
+
+
+//Респонсивность
+
+//Мобильная версия
+
+//Плагины
+@import 'sass/plagins/bootstrap-select/bootstrap-select';

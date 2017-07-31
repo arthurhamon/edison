@@ -1,0 +1,19 @@
+@media (max-width: $media-xs-max-width) {	
+	.single-product .shop-top-panel {
+		margin-bottom: 30px;
+	}
+	.shop-top-panel .woocommerce-breadcrumb .item.previous {
+		display: inline-block;
+	}
+	.single-product .summary .brand {
+		margin: 0 0 23px;
+	}
+	.single-product .summary .price {
+		margin: 0 0 35px;
+	}
+	.single-product .attributes {
+		background: none;
+		    padding-top: 0;
+	}
+
+}

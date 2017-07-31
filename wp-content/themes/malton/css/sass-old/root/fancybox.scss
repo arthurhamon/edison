@@ -1,0 +1,44 @@
+span.wpcf7-not-valid-tip {
+	display: none;
+}
+div.wpcf7-response-output {
+	display: none !important;
+}
+div.wpcf7 .ajax-loader {
+	position: absolute;
+    right: -16px;
+    top: 50%;
+	margin: -8px 0 0;
+}
+
+.wpcf7-not-valid {
+	border-color: red !important;
+}
+.fancybox-nav {
+	width: 36px;
+    right: -36px;
+}
+.fancybox-nav span {
+	visibility: visible;
+    background: none;
+}
+.fancybox-prev span {
+    left: 0;
+	@include left-arrow(2px, 11px, #4b5a5f);
+}
+.fancybox-next span {
+    right: 0;
+	@include right-arrow(2px, 11px, #4b5a5f);
+}
+.fancybox-prev {
+	width: 36px;
+	left: -36px;
+}
+
+.fancybox-close {
+	top: 0px;
+    right: -15px;
+    width: 15px;
+    height: 15px;
+	background: url(../img/fancybox-close.png) center center no-repeat;
+}

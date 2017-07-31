@@ -1,0 +1,182 @@
+.single-portfolio {
+	padding: 20px 0 20px;
+}
+.single-portfolio .wrap-jcarousel .jcarousel li {
+	height: 628px;
+}
+.single-portfolio .wrap-jcarousel {
+	position: relative;
+	margin: 0 0 20px;
+}
+.single-portfolio .wrap-jcarousel .border {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 10px 10px;
+    top: 0;
+    left: 0;
+}
+.single-portfolio .wrap-jcarousel .border:before {
+	content: '';
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+}
+.single-portfolio .wrap-jcarousel .jcarousel-prev {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0 10px 10px;
+	width: 50px;
+	height: 100%;
+	@include cros-opacity (1);
+	@include animation-transition(0.5s);
+}
+.single-portfolio .wrap-jcarousel .jcarousel-prev.inactive {
+	cursor: default;
+	@include cros-opacity (0);
+}
+.single-portfolio .wrap-jcarousel .jcarousel-prev:before {
+	content: '';
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+	background: rgba(255, 255, 255, 0.35);
+	@include animation-transition(0.5s);
+}
+.single-portfolio .wrap-jcarousel .jcarousel-prev:hover:before {
+	background: rgba(255, 255, 255, 0.50);
+}
+.single-portfolio .wrap-jcarousel .jcarousel-prev:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 27px;
+	@include left-arrow(2px, 11px, #4b5a5f);
+}
+.single-portfolio .wrap-jcarousel .jcarousel-next {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 10px 10px 10px 0;
+	width: 50px;
+	height: 100%;
+	@include cros-opacity (1);
+	@include animation-transition(0.5s);
+}
+.single-portfolio .wrap-jcarousel .jcarousel-next.inactive {
+	cursor: default;
+	@include cros-opacity (0);
+}
+.single-portfolio .wrap-jcarousel .jcarousel-next:before {
+	content: '';
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+	background: rgba(255, 255, 255, 0.35);
+	@include animation-transition(0.5s);
+}
+.single-portfolio .wrap-jcarousel .jcarousel-next:hover:before {
+	background: rgba(255, 255, 255, 0.50);
+}
+.single-portfolio .wrap-jcarousel .jcarousel-next:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 27px;
+	@include right-arrow(2px, 11px, #4b5a5f);
+}
+
+.single-portfolio .content {
+	position: relative;
+	background: #fff;
+	border: 1px solid #64828c;
+	padding: 48px 0 60px;
+	/*background: url(../img/template-portfolio-single.png) -100px -661px no-repeat;*/
+}
+.single-portfolio .content .border {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 10px 10px;
+    top: 0;
+    left: 0;
+}
+.single-portfolio .content .border:before {
+	content: '';
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #d2dce1;
+}
+.single-portfolio .content .title {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.single-portfolio .like-posts {
+	padding: 55px 0 0;
+}
+.single-portfolio .like-posts .main-title {
+	text-align: center;
+	margin-bottom: 35px;
+}
+.single-portfolio .like-posts .items .item {
+	display: block;
+	position: relative;
+	height: 300px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	padding: 0 50px;
+}
+.single-portfolio .like-posts .items .wrap-vertical-position {
+	position: relative;
+}
+.single-portfolio .like-posts .items .item .border {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 10px 10px;
+    top: 0;
+    left: 0;
+	background: rgba(75, 90, 95, 0.6);
+	@include animation-transition(0.5s);
+}
+.single-portfolio .like-posts .items .item .border:before {
+	content: '';
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+}
+.single-portfolio .like-posts .items .item:hover .border {
+	background: rgba(75, 90, 95, 0);	
+}
+.single-portfolio .like-posts .items .item .title {
+	position: relative;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 25px;
+	text-transform: uppercase;
+	padding: 0 0 10px;
+}
+.single-portfolio .like-posts .items .item .title:before {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 1px;
+	width: 120px;
+	border-bottom: 1px solid #fff;
+	bottom: 0px;
+	left: 50%;
+	margin: 0 0 0 -60px;
+}
+.single-portfolio .like-posts .items .item .term {
+	font-size: 14px;
+}

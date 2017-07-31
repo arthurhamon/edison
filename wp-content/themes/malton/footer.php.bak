@@ -1,0 +1,64 @@
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					&copy; Калуга, 2017
+				</div>
+				<div class="col-xs-3">
+					Сделано в <a href="http://maton.ru">Malton Tech.</a>
+				</div>
+				<div class="col-xs-2">
+					+7 (4842) 926-606
+				</div>
+				<div class="col-xs-3">
+					ул. Генерала Попова, 15
+				</div>
+				<div class="col-xs-2">
+					<div class="social">
+						<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div style="display: none">
+		<?php $services = get_posts_hierarchy('service');?>
+		<ul class="common-list-services">
+			<?php foreach($services[0] as $row) : ?>
+				<?php if(isset($services[$row->ID])) : ?>
+					<li data-parent-id="<?php echo $row->ID; ?>">
+						<span data-id="<?php echo $row->ID; ?>"><?php echo $row->post_title; ?></span>
+						<ul>
+							<?php foreach($services[$row->ID] as $row_child) : ?>
+								<li data-id="<?php echo $row_child->ID; ?>"><?php echo $row_child->post_title; ?></li>
+							<?php endforeach; ?>
+						</ul>
+					</li>
+				<?php endif; ?>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+	
+	
+	
+	<div style="display: none;">
+		<div id="fancybox-registration" class="form-fancybox-full-screen fancybox-registration">
+			<div class="wrap-vertical-position">
+				<div class="vertical-middle">
+					<div class="main-title text-center">Записаться online</div>
+					<div class="container">
+						<div class="row wrap-form wrap-selectpicker-link">
+							<?php echo do_shortcode('[contact-form-7 id="189" title="Записаться online"]'); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php wp_footer(); ?>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+.front-page {
+    display: table;
+	position: relative;
+    height: 100%;
+    width: 100%;
+}
+.front-page .row {
+	height: 100%;
+    display: table-row;
+}
+.front-page .row {
+	height: 100%;
+    display: table-row;
+}
+.front-page .item {
+	float: none;
+    display: table-cell;
+	position: relative;
+	height: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.front-page .item .img {
+	position: relative;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.front-page .item .img .cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 19px;
+    background: rgba(75, 90, 95, 0.6);
+	@include animation-transition(0.5s);
+}
+.front-page .item .img:hover .cover {
+    background: rgba(75, 90, 95, 0);
+}
+.front-page .item .img .cover .inner {
+    display: table;
+    border: 1px solid #f2f6fa;
+    width: 100%;
+	height: 100%;
+}
+.front-page .item .img .cover .inner .main-title {
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    padding: 31px 0;
+    max-width: 320px;
+    margin: 0 auto 5px;
+}
+.front-page .item .img .cover .inner .main-title:after {
+    content: '';
+    display: block;
+    background: url(../img/bottom-separator.png) center top no-repeat;
+    height: 15px;
+    margin-top: 14px;
+}
+.front-page .item .img:hover .cover .inner .main-title:after {
+    background-position: center bottom;
+}
+.front-page .item .img:hover .cover .inner .main-title {
+    background: rgba(242, 246, 250, 0.85);
+    color: #4b5a5f;
+}
+
+.front-page .item .img:hover .cover .inner .menu {
+    display: block;
+}
+.front-page .item .img .cover .inner .menu {
+    display: none;
+}
+.front-page .item .img .cover .inner .menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 22px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+.front-page .item .img .cover .inner .menu ul li {
+    display: block;
+    max-width: 320px;
+    text-align: center;
+    margin: 0 auto 5px;
+}
+.front-page .item .img .cover .inner .menu ul li:last-child {
+	margin-bottom: 0;
+}
+.front-page .item .img .cover .inner .menu ul li a {
+    display: block;
+    color: #4b5a5f;
+    padding: 20px 20px;
+    text-decoration: none;
+    background: rgba(242, 246, 250, 0.85);
+}

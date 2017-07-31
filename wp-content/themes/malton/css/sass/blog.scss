@@ -1,0 +1,225 @@
+.blog {
+	padding: 0 0 61px;
+}
+.blog .important {
+	overflow: hidden;
+}
+.blog .important .wrap-jcarousel {
+	position: relative;
+	height: 600px;
+}
+.blog .important .wrap-jcarousel .jcarousel-prev {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16.66666667%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.75);
+}
+.blog .important .wrap-jcarousel .jcarousel-prev:before {
+	content: '';
+	position: absolute;
+    display: block;
+	top: 50%;
+	left: 50%;
+	width: 90px;
+	height: 22px;
+	margin: -11px 0 0 -44px;
+	background: url(../img/long-arrow.png) left top no-repeat;
+}
+.blog .important .wrap-jcarousel .jcarousel-prev:hover:before {
+	background-position: left bottom;
+}
+.blog .important .wrap-jcarousel .jcarousel-next {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 16.66666667%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.75);
+}
+.blog .important .wrap-jcarousel .jcarousel-next:before {
+	content: '';
+	position: absolute;
+    display: block;
+	top: 50%;
+	right: 50%;
+	width: 90px;
+	height: 22px;
+	margin: -11px -44px 0 0;
+	background: url(../img/long-arrow.png) right top no-repeat;
+}
+.blog .important .wrap-jcarousel .jcarousel-next:hover:before {
+	background-position: right bottom;
+}
+
+
+.blog .important .wrap-jcarousel .jcarousel {
+	position: relative;
+	overflow: visible;
+	width: 200%;
+	left: -50%;
+}
+.blog .important .item {
+	position: relative;
+	height: 600px;
+}
+.blog .important .item .bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+} 
+.blog .important .item .bottom-panel {
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 0 0 25px;
+	background: rgba(255, 255, 255, 0.75);
+} 
+.blog .important .item .bottom-panel .left-part {
+	display: table;
+	width: 100%;
+	height: 170px;
+	overflow: hidden;
+}
+.blog .important .item .bottom-panel .title {
+	font-weight: 300;
+    line-height: 58px;
+    margin: 0;
+}
+.blog .important .item .bottom-panel .title a {
+	text-decoration: none;
+	color: #3B4444;
+}
+.blog .important .item .bottom-panel .right-part {
+	padding: 41px 0 0 9px;
+	height: 170px;
+	overflow: hidden;
+}
+.blog .important .item .bottom-panel .right-part .post-categories {
+	display: block;
+    padding: 0;
+    margin: 0 0 13px;
+    list-style: none;
+    font-weight: 600;
+}
+.blog .important .item .bottom-panel .right-part .post-categories li {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.blog .important .item .bottom-panel .right-part .post-categories li a {
+	color: #769769;
+}
+.blog-categories {
+	background: #EEF2F3;
+}
+
+.blog-categories .wrap-btn-menu {
+	position: relative;
+	z-index: 5;
+}
+.blog-categories .wrap-btn-menu .btn-menu {
+	@include menu-icon(#3B4444);
+}
+.blog-categories .wrap-btn-menu.show .btn-menu {
+	@include close-menu-icon();
+}
+
+.blog-categories ul {
+	display: block;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 1.6px;
+}
+.blog-categories ul li {
+	display: inline-block;
+}
+.blog-categories ul li a {
+    display: inline-block;
+	text-decoration: none;
+	color: #7B8586;
+	height: 100px;
+    padding: 32px 13px 0;	
+}
+.blog-categories ul li.act a {
+	color: $a-color;
+}
+
+.blog .items {
+	padding: 100px 0;
+}
+.blog .items .item  {
+	margin-bottom: 90px;
+}
+.blog .items .item .img {
+	margin: 0 0 26px;
+	text-align: center;
+}
+.blog .items .item .img img {
+	max-width: 100%;
+	margin-bottom: 30px;
+}
+.blog .items .item .title {
+	font-size: 28px;
+    line-height: 45px;
+	margin-bottom: 13px;
+}
+.blog .items .item .title a {
+	color: $main-color;
+	text-decoration: none;
+}
+.blog .items .item .post-categories {
+	display: block;
+	padding: 0;
+	margin: 0 0 23px;
+	list-style: none;
+	font-weight: 600;
+}
+.blog .items .item .post-categories li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+.blog .items .item .post-categories li a {
+	color: #769769;
+}
+.blog .items .item .text {    
+	margin-bottom: 45px;
+	color: $main-color;
+	text-decoration: none;
+}
+.blog .items .item .text .more {
+	color: #7B8586;
+	text-decoration: none;
+}
+.blog .items .item .permalink {
+	display: block;
+	width: 90px;
+	height: 22px;
+	background: url(../img/more.png) left top no-repeat;
+}
+
+.blog .paginate {
+	text-align: center;
+	font-weight: 600;
+}
+.blog .paginate a {
+	text-decoration: none;
+}
+.blog .paginate .dots {
+	color: $a-color;
+}
+.blog .paginate .page-numbers {
+	display: inline-block;
+	margin: 0 10px;
+}

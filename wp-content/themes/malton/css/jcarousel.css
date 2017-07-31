@@ -1,0 +1,25 @@
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+.jcarousel > ul {
+    width: 20000em;
+    position: relative;
+
+    /* Optional, required in this case since it's a <ul> element */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.jcarousel.vertical > ul {
+    width: 100%;
+    height: 20000em;
+}
+.jcarousel > ul > li {
+    /* Required only for block elements like <li>'s */
+    float: left;
+}
+.jcarousel.vertical > ul > li {
+    /* Required only for block elements like <li>'s */
+    float: none;
+}

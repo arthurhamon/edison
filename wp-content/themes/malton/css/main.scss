@@ -1,0 +1,46 @@
+//Функции и переменные
+@import 'sass/root/setting';
+//Вспомогательные стили для верстки 
+@import 'sass/root/addition-bootstrap';
+//Основные стили для fancybox
+@import 'sass/root/fancybox';
+
+//Стандартные стили ворпресса
+@import 'sass/root/base-wordpress';
+
+//Основные стили темы
+@import 'sass/root/base';
+//Стили темы
+@import 'sass/template';
+@import 'sass/shop';
+@import 'sass/front-page';
+@import 'sass/single-product';
+@import 'sass/services';
+@import 'sass/single-specialist';
+@import 'sass/blog';
+@import 'sass/single';
+@import 'sass/cart';
+@import 'sass/about';
+@import 'sass/contacts';
+
+
+
+//Респонсивность
+@import 'sass/responsive/bootstrap-responsive';
+@import 'sass/responsive/base-responsive';
+@import 'sass/responsive/front-page-responsive';
+@import 'sass/responsive/template-responsive';
+@import 'sass/responsive/services-responsive';
+@import 'sass/responsive/blog-responsive';
+@import 'sass/responsive/about-responsive';
+@import 'sass/responsive/shop-responsive';
+@import 'sass/responsive/single-product-responsive';
+@import 'sass/responsive/single-specialist-responsive';
+@import 'sass/responsive/single-responsive';
+@import 'sass/responsive/contacts-responsive';
+@import 'sass/responsive/cart-responsive';
+
+//Мобильная версия
+
+//Плагины
+@import 'sass/plagins/bootstrap-select/bootstrap-select';
