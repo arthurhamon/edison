@@ -4,13 +4,18 @@
      -o-transition: all 0.5s ease-out 0s;
      transition: all 0.5s ease-out 0s;
 }*/
-$a-color: #88C9CD;
-$a-color2: #769769;
-$main-color: #7B8586;
+$a-color: #4D4249;
+$main-color: #54514F;
+$main-color-2: #E1CDC8;
 $main-bg: #fff;
 
-$media-md-max-width: 1299px;
+$media-lg-min-width: 1200px;
+$media-md-min-width: 992px;
+$media-sm-min-width: 768px;
+
+$media-md-max-width: 1200px;
 $media-xs-max-width: 768px;
+
 
 
 @mixin right-arrow ($border_width, $pxwidth, $pxheight, $color) {
@@ -63,11 +68,12 @@ $media-xs-max-width: 768px;
 	border-left: $border_width solid $color;
 	border-right: none;
 }
-@mixin animation-transition ($speed) {
-	-webkit-transition: all $speed ease-out 0s;
-     -moz-transition: all $speed ease-out 0s;
-     -o-transition: all $speed ease-out 0s;
-     transition: all $speed ease-out 0s;
+//@include animation-transition (0.5s, all);
+@mixin animation-transition ($speed, $styleName) {
+	-webkit-transition: $styleName $speed ease-out 0s;
+     -moz-transition: $styleName $speed ease-out 0s;
+     -o-transition: $styleName $speed ease-out 0s;
+     transition: $styleName $speed ease-out 0s;
 }
 @mixin cros-opacity ($val) {
 	-moz-opacity: $val; /* Mozilla 1.6 и ниже */
@@ -80,20 +86,13 @@ $media-xs-max-width: 768px;
 	-khtml-border-radius: $val; /* KHTML */
 	border-radius: $val; /* CSS3 */
 }
-@mixin cros-transform ($val) {
-	-moz-transform: $val; /* Для Firefox */
-	-ms-transform: $val; /* Для IE */
-	-webkit-transform: $val; /* Для Safari, Chrome, iOS */
-	-o-transform: $val; /* Для Opera */
-	transform: $val;
-}
 @mixin menu-icon ($color) {
 	.icon {
 		position: relative;
 		display: inline-block;
 		height: 14px;
 		width: 16px;
-		margin: 0 13px 0 0;
+		margin: 0;
 	}
 	.icon:before {
 		content: '';
@@ -103,7 +102,7 @@ $media-xs-max-width: 768px;
 		top: 0;
 		left: 0;
 		background: $color;
-		@include animation-transition (0.3s);
+		@include animation-transition (0.3s, all);
 	}
 	.icon:after {
 		content: '';
@@ -113,7 +112,7 @@ $media-xs-max-width: 768px;
 		bottom: 0;
 		left: 0;
 		background: $color;
-		@include animation-transition (0.3s);
+		@include animation-transition (0.3s, all);
 	}
 	.icon .middle-line {
 		position: absolute;
@@ -126,8 +125,6 @@ $media-xs-max-width: 768px;
 	}
 }
 @mixin close-menu-icon () {	
-	
-	
 	.icon:before {
 		-moz-transform: rotate(-45deg);
 		-o-transform: rotate(-45deg);
@@ -144,5 +141,24 @@ $media-xs-max-width: 768px;
 	}
 	.icon .middle-line {
 		@include cros-opacity (0);
+	}
+}
+@mixin open-menu-icon () {	
+	.icon:before {
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		top: 0px;
+	}
+	.icon:after {
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		bottom: 0px;
+	}
+	.icon .middle-line {
+		@include cros-opacity (1);
 	}
 }

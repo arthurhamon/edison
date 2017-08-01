@@ -6,10 +6,20 @@
 .vertical-middle {
 	display: table-cell;
 	vertical-align: middle;
+	width: 100%;
+}
+.vertical-top {
+	display: table-cell;
+	vertical-align: top;
+	width: 100%;
 }
 .vertical-bottom {
 	display: table-cell;
 	vertical-align: bottom;
+	width: 100%;
+}
+.table-row {
+	display: table-row;
 }
 .no-p {
 	padding-left: 0 !important;

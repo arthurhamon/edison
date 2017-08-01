@@ -84,9 +84,8 @@ select.selectpicker {
   }
 
   .dropdown-toggle:focus {
-    outline: thin dotted #333333 !important;
-    outline: 5px auto -webkit-focus-ring-color !important;
-    outline-offset: -2px;
+    outline: 0;
+    outline-offset: 0;
   }
 }
 
@@ -182,9 +181,8 @@ select.selectpicker {
 
     .caret {
       position: absolute;
-      top: 50%;
-      right: 12px;
-      margin-top: -2px;
+      top: 6px;
+      right: 2px;
       vertical-align: middle;
     }
   }

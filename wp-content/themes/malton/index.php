@@ -7,8 +7,7 @@ global $wp_query, $post;
 	<?php if( have_posts() ) : 
 		$blog = array(0=>array(), 1=>array(), 2=>array());
 		//Подготавливаем массив в 3 столбца
-		$i=0;
-		while ( have_posts() ) { the_post(); $i++;
+		$i=0; while ( have_posts() ) { the_post(); $i++;
 			if(!($i%3)) {
 				$blog[2][] = $post;
 			}

@@ -4,8 +4,8 @@ function setting_pre_get_posts_for_custom_post($query) {
 	
 	if ( ! is_admin() && $query->is_main_query() ) {
 	  
-		//Проверяем является ли запрос отображение записей в таксономии portfolio_tag
-		if (is_tax('portfolio_tag')) {
+		//Проверяем является ли запрос отображение записей в таксономии category_examples
+		if (is_tax('category_examples')) {
 			//Отключаем пагинацию на страница отображения по метки портфолио
 			$query->set( 'posts_per_page', -1 );
 		}

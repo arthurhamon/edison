@@ -1,32 +1,44 @@
+.container {
+	//width: 1164px !important;
+}
 body {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 20px;
-	line-height: 40px;
+	//font-family: 'Podkova', serif;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
 	color: $main-color;
 	background: #fff;	
-	//background: url(../img/template-main.png) center -66px no-repeat #fff;
+	background: url(../img/template-info.png) center -2432px no-repeat #fff;
 	//height: 5000px;
 }
 a {
 	color: $a-color;
-	text-decoration: underline;
+	text-decoration: none;
+	border-bottom: 1px solid #E1CDC8;
 }
 a:hover {
 	text-decoration: none;
 	color: $a-color;
+	border-color: transparent;
 }
-
+a:focus {
+    outline: 0;
+    outline-offset: 0px;
+}
+a:hover, a:focus {
+	color: $a-color;
+	text-decoration: none;
+}
+b, strong {
+    font-weight: 400;
+}
+sub, sup {
+    font-size: 64%;
+}
 html {
     position: relative;
     min-height: 100%;
-	padding-bottom: 110px;
-}
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 110px;
-	padding-top: 38px;
 }
 
 

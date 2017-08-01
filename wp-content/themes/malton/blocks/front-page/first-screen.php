@@ -1,78 +1,58 @@
-<div class="front-page-first-screen full-window-height">
-	<div class="bg">
-		<?php if(get_field('video-mp4', 141) || get_field('video-webm', 141)) : ?>	
-			<video id="home-vid" autoplay="" loop="" preload="" muted="" style="width: 100%; height: auto;" class="hidden-xs">
-				<?php if(get_field('video-mp4', 141)) : ?>
-					<source type="video/mp4" src="<?php echo get_field('video-mp4', 141) ?>">
-				<?php endif; ?>
-				<?php if(get_field('video-webm', 141)) : ?>
-					<source type="video/webm" src="<?php echo get_field('video-webm', 141) ?>">
-				<?php endif; ?>
-			</video>		
-		<?php else : ?>	
-			<?php 
-				$gallery = get_field('first-screen-slider', 141);
-				if($gallery) :
-			?>
-			<ul class="gallery">
-				<?php $i=0; foreach($gallery as $row) : $i++;?>
-				<li class="<?php if($i==1) echo 'active'; ?>" style="background-image: url(<?php echo $row['url']; ?>)"></li>
-				<?php endforeach; ?>
-			</ul>
-			<?php endif; ?>	
-		<?php endif; ?>
-	</div>
-	<div class="top-part">
-		<div class="container-fluid">
+<div class="<?php if(wpmd_is_phone() || wpmd_is_tablet()) echo 'full-window-height'; ?> first-screen full-height light-text dark-bg" data-stellar-offset-parent="true">
+	<div class="border-bottom" data-stellar-ratio="0.1">
+		<div class="container">
 			<div class="row">
-				<div class="col-xs-3">
-					<div class="wrap-btn-menu">
-						<a href="#menu-first-screen" class="btn-menu switch-menu-first-screen" id="switch-menu-first-screen">
-							<span class="icon"><span class="middle-line"></span></span>
-							<span class="hidden-xs">МЕНЮ</span>
-						</a>
+				<div class="col-lg-4 col-lg-offset-4 col-sm-5 col-sm-offset-4 col-xs-6 col-xs-offset-3">
+					<div class="inner"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-1 col-xs-12 text-center-xs text-right top-margin-logo">
+				<a href="/" class="logo main-logo-light big-logo" href="#"></a>
+			</div>
+			<div class="col-sm-3 col-xs-12 text-center-xs top-margin-logo">
+				<a href="/" class="logo-text text-uppercase">Калужская<br />швейная фабрика</a>
+				<div class="visible-xs"><br /><span class="logo-text"><?php the_field('phone', 'option'); ?></span></div>
+			</div>
+			<div class="col-xs-8">				
+				<?php 
+				global $navigatePanelSetting;
+				$navigatePanelSetting = array();
+				$navigatePanelSetting['isFirst'] = true;
+				get_template_part('blocks/base/navigate-panel'); ?>
+			</div>
+		</div>
+	</div>		
+	<?php if( have_rows('first-screen-slider', 26) ): ?>
+	<div class="slider">
+		<ul>			
+			<?php while ( have_rows('first-screen-slider', 26) ) : the_row(); ?>			
+				<?php $img = get_sub_field('img'); 
+				if($img) : ?>
+				<li data-stellar-ratio="0.5">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="row">
+									<div class="col-md-3 col-md-offset-1 col-sm-4 position-static hidden-xs">	
+										<div class="left-text">
+											<div class="h1"><?php the_sub_field('text'); ?></div>
+										</div>
+									</div>
+									<div class="col-lg-4 col-lg-pull-0 col-lg-offset-0 col-sm-5 col-sm-offset-0 col-xs-6 col-xs-offset-3 text-center">
+										<img class="center-img" src="<?php echo $img['sizes']['image-auto-800']; ?>" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="col-sm-6 col-xs-12 text-center wrap-logo">
-					<a class="logo" href="/"></a>
-				</div>
-				<div class="col-sm-3 col-xs-12">
-					<div class="contact-info">
-						<span><?php the_field('phone', 'option'); ?></span><br />
-						<?php the_field('address', 'option'); ?>
-					</div>
-				</div>
-			</div>
-		</div>
+				</li>
+				<?php endif; ?>
+			<?php endwhile; ?>
+		</ul>
 	</div>
-	<div class="middle-part">
-		<div class="container-fluid hidden-xs">
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="text">Только качественная косметика,<br />только лучшие специалисты!</div>
-					<div class="separate"></div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="container-fluid hidden-xs">
-			<div class="row">
-				<div class="col-xs-4 col-xs-offset-4">
-					<div class="wrap-btn"><a class="btn btn-block btn-green fancybox-preset-registration" data-from="Домашняя страница первый блок" href="#fancybox-registration">ЗАПИСАТЬСЯ ONLINE</a></div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="social">
-			<?php if( have_rows('social', 'option') ): ?>
-				<?php while ( have_rows('social', 'option') ) : the_row(); ?>					
-					<a href="<?php the_sub_field('href'); ?>"><?php the_sub_field('icon'); ?></a>
-				<?php endwhile; ?>
-			<?php endif; ?>
-		</div>
-	</div>
-	<div class="wrap-next-screen"><a href="#next-screen" class="next-screen scroll-to-first-screen"></a></div>
-	
-	<div class="wrap-bottom-mobile visible-xs"><a class="btn btn-block btn-green fancybox-preset-registration" data-from="Домашняя страница первый блок" href="#fancybox-registration">ЗАПИСАТЬСЯ ONLINE</a></div>
+	<?php endif; ?>
 </div>
-<div id="next-screen"></div>

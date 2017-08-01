@@ -15,10 +15,6 @@ require_once('setting/styles_and_scripts.php');
 require_once('setting/acf-init.php');
 //Хлебные крошки
 require_once('setting/kama_breadcrumbs.php');
-//Инициализация облостей виджетов
-require_once('setting/widgets.php');
-//Настройки woocommerce
-require_once('setting/woocommerce_settings.php');
 //Настройк cf7
 require_once('setting/cf7.php');
 ?>
