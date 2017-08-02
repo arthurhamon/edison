@@ -1,3 +1,4 @@
+$('.scroll-to').scrollToAnim();
 $(".fancybox-full-screen").fancybox({
 	width: "100%", 
 	height: "100%",
@@ -17,7 +18,7 @@ $(window).load(
 	function() {	
 		$('#preloader').hide();
 		fullWindowHeight();
-		//$('.example-gallery .wrap-jcarousel').wrapJcarousel();		
+		$('.front-page .provider .wrap-jcarousel').wrapJcarousel();		
 	}
 );
 $( window ).resize(function() {

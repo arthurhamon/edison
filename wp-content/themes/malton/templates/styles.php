@@ -33,6 +33,12 @@ Template Post Type: page
 			<div class="form-group">
 				<a href="#" class="btn btn-red btn-block">Маленькая красная кнопка</a>
 			</div>
+			<div class="form-group">
+				<a href="#" class="btn btn-transparent btn-block">Маленькая прозрачная кнопка</a>
+			</div>
+			<div class="form-group" style="background: #000">
+				<a href="#" class="btn btn-transparent-white btn-block">Маленькая прозрачная кнопка c белым текстом и рамкой</a>
+			</div>
 		</div>
 	</div>
 	<div class="row">

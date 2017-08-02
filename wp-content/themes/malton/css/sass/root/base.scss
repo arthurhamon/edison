@@ -9,18 +9,19 @@ body {
 	font-weight: 400;
 	color: $main-color;
 	background: #fff;	
-	background: url(../img/template-info.png) center -2432px no-repeat #fff;
-	//height: 5000px;
+	background: url(../img/template-main.png) center -48px no-repeat #fff;
+	height: 6000px;
 }
 a {
 	color: $a-color;
-	text-decoration: none;
-	border-bottom: 1px solid #E1CDC8;
+	text-decoration: underline;
 }
 a:hover {
 	text-decoration: none;
 	color: $a-color;
-	border-color: transparent;
+}
+a:visited {
+	color: #8F9280;
 }
 a:focus {
     outline: 0;
