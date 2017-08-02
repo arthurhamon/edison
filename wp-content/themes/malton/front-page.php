@@ -6,6 +6,7 @@
 		<?php get_template_part('blocks/front-page/our-mission'); ?>
 		<?php get_template_part('blocks/front-page/our-projects'); ?>
 		<?php get_template_part('blocks/front-page/provider'); ?>
+		<?php get_template_part('blocks/front-page/about-cooperation'); ?>
 	</div>
 <?php endif; ?>
 <?php get_footer(); ?>

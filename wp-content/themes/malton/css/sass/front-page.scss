@@ -142,7 +142,7 @@
 	@include cros-opacity(1);	
 }
 .front-page .provider {
-	padding-top: 36px
+	padding: 36px 0 78px;
 }
 .front-page .provider .main-title {
 	margin-bottom: 55px;
@@ -181,5 +181,28 @@
 
 .front-page .provider .wrap-jcarousel .jcarousel-next:hover {
 	@include right-arrow (2px, 24px, 24px, $main-color);	
+}
+.front-page .about-cooperation {
+	padding: 58px 0 59px;
+	background: #EEECEB;
+}
+.front-page .about-cooperation p {
+	margin-bottom: 30px;
+}
+.front-page .about-cooperation .bottom-border {	
+	position: relative;
+    padding: 59px 0 0;
+	border-bottom: 2px solid #D8DBCD;
+}
+.front-page .about-cooperation .bottom-border:before {	
+	content: '';
+	display: block;
+	position: absolute;
+	background: url(../svg/cutlery.svg) center center no-repeat #EEECEB;
+	width: 88px;
+	height: 40px;
+	bottom: -21px;
+	left: 50%;
+	margin-left: -44px;
 }
 

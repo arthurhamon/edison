@@ -6786,7 +6786,7 @@ a.btn {
 
 .btn {
   border: 1px solid transparent;
-  padding: 8px 12px;
+  padding: 8px 15px;
   border-radius: 0;
   text-transform: uppercase;
   letter-spacing: 1.3px;
@@ -7000,7 +7000,7 @@ body {
   font-weight: 400;
   color: #54514F;
   background: #fff;
-  background: url(../img/template-main.png) center -48px no-repeat #fff;
+  background: url(../img/template-main.png) center -563px no-repeat #fff;
   height: 6000px; }
 
 a {
@@ -7240,7 +7240,7 @@ html {
   /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9+, Chrome 5+, IE 9+ */ }
 
 .front-page .provider {
-  padding-top: 36px; }
+  padding: 36px 0 78px; }
 
 .front-page .provider .main-title {
   margin-bottom: 55px; }
@@ -7319,6 +7319,29 @@ html {
   border-top: 2px solid #54514F;
   border-right: 2px solid #54514F;
   border-left: none; }
+
+.front-page .about-cooperation {
+  padding: 58px 0 59px;
+  background: #EEECEB; }
+
+.front-page .about-cooperation p {
+  margin-bottom: 30px; }
+
+.front-page .about-cooperation .bottom-border {
+  position: relative;
+  padding: 59px 0 0;
+  border-bottom: 2px solid #D8DBCD; }
+
+.front-page .about-cooperation .bottom-border:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: url(../svg/cutlery.svg) center center no-repeat #EEECEB;
+  width: 88px;
+  height: 40px;
+  bottom: -21px;
+  left: 50%;
+  margin-left: -44px; }
 
 @media (max-width: 1200px) {
   h1, .h1 {
