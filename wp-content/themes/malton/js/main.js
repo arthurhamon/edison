@@ -17,6 +17,9 @@ $(".fancybox").fancybox({
 $(window).load(
 	function() {	
 		$('#preloader').hide();
+		$('#sliderScrollbar').sliderScrollbar({
+			responsivecountitem: 4,
+		});
 		fullWindowHeight();
 		$('.front-page .provider .wrap-jcarousel').wrapJcarousel();		
 	}

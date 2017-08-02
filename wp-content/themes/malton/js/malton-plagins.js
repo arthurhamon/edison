@@ -1,4 +1,39 @@
 (function( $ ){
+	//Слайдер со скролом
+	$.fn.sliderScrollbar = function( options ) {
+		var settings = $.extend( {
+			responsivecountitem: 0,
+		}, options);
+		
+		var $this = this;
+		
+		if(settings.responsivecountitem > 0) {
+			$( window ).resize(function() {
+				responsiveItems($this);
+			});
+			responsiveItems($this);
+		}
+		
+		var amount=Math.max.apply(Math, this.find('li').map(function(){return $(this).outerWidth(true);}).get());	
+		this.mCustomScrollbar({
+			axis:"x",
+			theme:"inset",
+			advanced:{
+				autoExpandHorizontalScroll:true
+			},
+			scrollButtons:{
+				enable:true,
+				scrollType:"stepped"
+			},
+			keyboard:{scrollType:"stepped"},
+			snapAmount:amount,
+			mouseWheel:{scrollAmount:amount}
+		});	
+		function responsiveItems($this) {
+			var wrapWidth = $this.outerWidth(true);
+			$this.find('li').css('width', wrapWidth/settings.responsivecountitem + 'px');			
+		}
+	};
 	//Делаем одинаковой высотой все дочерние элементы с классом itemClass
 	//Пример $('.group-same-heights').sameHeight();
 	$.fn.sameHeight = function( options ) {  
