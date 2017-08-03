@@ -4,7 +4,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 }
 h1, .h1, h2, .h2, h3, .h3 {
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 21px;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
    font-family: 'Podkova', serif;
@@ -27,10 +27,10 @@ h1, .h1 {
 	position: relative;
     font-size: 48px;
 	text-align: center;
-	padding: 0 0 20px;
+	padding: 0 0 22px;
 }
 h2, .h2 {
-	line-height: 1.6;
+	line-height: 1.1;
 	font-size: 30px;
 	margin-bottom: 14px;
 }
@@ -49,8 +49,8 @@ h1:before, .h1:before {
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-	width: 174px;
-	margin-left: -87px;
+	width: 152px;
+    margin-left: -76px;
 	border-bottom: 2px solid #BD381F;
 }
 blockquote:before {
@@ -76,7 +76,7 @@ blockquote:before {
   font-size: 20px;
   line-height: 1.42857143;
   color: #2C2929;
-  background-color: transparent;
+  background-color: #fff;
   background-image: none;
   border: 1px solid #D8DBCD;
   border-radius: 0;
@@ -131,7 +131,9 @@ a.btn {
   letter-spacing: 1.6px;
 }
 
-
+.btn-green:visited {
+  color: #fff;
+}
 .btn-green {
   color: #fff;
   background-color: #6C762E;
@@ -175,6 +177,9 @@ a.btn {
   background-color: #BD381F;
   border-color: #BD381F;
 }
+.btn-red:visited {
+  color: #fff;
+}
 .btn-red:focus,
 .btn-red.focus {
   color: #fff;
@@ -213,6 +218,9 @@ a.btn {
   background-color: transparent;
   border-color: #BD381F;
 }
+.btn-transparent:visited {
+  color: #BD381F;
+}
 .btn-transparent:focus,
 .btn-transparent.focus {
   color: #BD381F;
@@ -220,8 +228,8 @@ a.btn {
   border-color: #BD381F;
 }
 .btn-transparent:hover {
-  color: #BD381F;
-  background-color: transparent;
+  color: #fff;
+  background-color: #BD381F;
   border-color: #BD381F;
 }
 .btn-transparent:active,
@@ -240,8 +248,8 @@ a.btn {
 .btn-transparent:active.focus,
 .btn-transparent.active.focus,
 .open > .dropdown-toggle.btn-transparent.focus {
-  color: #BD381F;
-  background-color: transparent;
+  color: #fff;
+  background-color: #BD381F;
   border-color: #BD381F;
 }
 
@@ -251,33 +259,36 @@ a.btn {
   background-color: transparent;
   border-color: #fff;
 }
-.btn-transparent:focus,
-.btn-transparent.focus {
+.btn-transparent-white:visited {
+  color: #fff;
+}
+.btn-transparent-white:focus,
+.btn-transparent-white.focus {
   color: #fff;
   background-color: transparent;
   border-color: #fff;
 }
-.btn-transparent:hover {
+.btn-transparent-white:hover {
+  color: #fff;
+  background-color: $main-color;
+  border-color: $main-color;
+}
+.btn-transparent-white:active,
+.btn-transparent-white.active,
+.open > .dropdown-toggle.btn-transparent-white {
   color: #fff;
   background-color: transparent;
   border-color: #fff;
 }
-.btn-transparent:active,
-.btn-transparent.active,
-.open > .dropdown-toggle.btn-transparent {
-  color: #fff;
-  background-color: transparent;
-  border-color: #fff;
-}
-.btn-transparent:active:hover,
-.btn-transparent.active:hover,
-.open > .dropdown-toggle.btn-transparent:hover,
-.btn-transparent:active:focus,
-.btn-transparent.active:focus,
-.open > .dropdown-toggle.btn-transparent:focus,
-.btn-transparent:active.focus,
-.btn-transparent.active.focus,
-.open > .dropdown-toggle.btn-transparent.focus {
+.btn-transparent-white:active:hover,
+.btn-transparent-white.active:hover,
+.open > .dropdown-toggle.btn-transparent-white:hover,
+.btn-transparent-white:active:focus,
+.btn-transparent-white.active:focus,
+.open > .dropdown-toggle.btn-transparent-white:focus,
+.btn-transparent-white:active.focus,
+.btn-transparent-white.active.focus,
+.open > .dropdown-toggle.btn-transparent-white.focus {
   color: #fff;
   background-color: transparent;
   border-color: #fff;

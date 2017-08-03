@@ -1,0 +1,44 @@
+.archive-vacancy .top-part {    
+	background: url(../img/fence-1-bg.png) center top no-repeat;
+	background-size: cover;
+	padding-bottom: 98px;
+	margin-bottom: 49px;
+}
+.archive-vacancy .items .item {    
+	margin-bottom: 83px;
+}
+.archive-vacancy .items .item img {
+	margin: 51px 0 27px;
+}
+.archive-vacancy .items .item .h2 {
+	margin-bottom: 10px;
+}
+.archive-vacancy .items .item .price {
+	color: $a-color;
+	font-weight: 800;
+}
+.archive-vacancy .items .item .inner {
+	padding-left: 40px;
+}
+.archive-vacancy .items .item .inner ul {
+	list-style-image: url(../img/ul-marker.png);
+	padding: 0 0 0 0;
+}
+.archive-vacancy .items .item .inner ul li {
+	margin-bottom: 10px;
+}
+.archive-vacancy .items .item h3 {
+	margin: 29px 0 9px;
+}
+.archive-vacancy .send-resume {
+	padding: 59px 0;
+	background: url(../img/fence-2-bg.png) center top no-repeat;
+	background-size: cover;
+}
+.archive-vacancy .send-resume .inner {
+	padding: 63px 0;
+	background: #fff;
+}
+.archive-vacancy .send-resume .inner .text {
+	margin-bottom: 38px;
+}

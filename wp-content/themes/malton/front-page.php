@@ -8,6 +8,8 @@
 		<?php get_template_part('blocks/front-page/provider'); ?>
 		<?php get_template_part('blocks/front-page/about-cooperation'); ?>
 		<?php get_template_part('blocks/front-page/team'); ?>
+		<?php get_template_part('blocks/front-page/career'); ?>
+		<?php get_template_part('blocks/front-page/map'); ?>
 	</div>
 <?php endif; ?>
 <?php get_footer(); ?>

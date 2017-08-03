@@ -182,30 +182,89 @@
 .front-page .provider .wrap-jcarousel .jcarousel-next:hover {
 	@include right-arrow (2px, 24px, 24px, $main-color);	
 }
-.front-page .about-cooperation {
-	padding: 58px 0 59px;
-	background: #EEECEB;
-}
-.front-page .about-cooperation p {
-	margin-bottom: 30px;
-}
-.front-page .about-cooperation .bottom-border {	
-	position: relative;
-    padding: 59px 0 0;
-	border-bottom: 2px solid #D8DBCD;
-}
-.front-page .about-cooperation .bottom-border:before {	
-	content: '';
-	display: block;
-	position: absolute;
-	background: url(../svg/cutlery.svg) center center no-repeat #EEECEB;
-	width: 88px;
-	height: 40px;
-	bottom: -21px;
-	left: 50%;
-	margin-left: -44px;
-}
 .front-page .team {
-	padding: 86px 0 20px;
+	padding: 87px 0 84px;
+}
+.front-page .team .item {
+	padding: 0 0 18px;
+}
+.front-page .team .item .wrap-img {
+	position: relative;
+	width: 210px;
+	height: 210px;
+	border: 1px solid $a-color;
+	@include border-radius (50%);
+	padding: 4px;
+	margin: 0 auto 22px;
+	overflow: hidden;
+	background: #fff;
+}
+.front-page .team .item .img {
+	position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 201px;
+    height: 201px;
+    background-position: center top;	
+	@include border-radius (50%);
+}
+.front-page .team .main-title {
+	margin-bottom: 60px;
+}
+.front-page .team .item .text {
+	margin-bottom: 33px;
+}
+.front-page .team .item .btn {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.front-page .career {
+	background: url(../img/career-bg.png) center top no-repeat;
+	height: 540px;
+	color: #fff;
+	padding: 221px 0 20px;
+}
+.front-page .career .inner {
+	padding: 17px 0 40px;
+	background: rgba(44, 41, 41, 0.65);
+
+}
+.front-page .career .main-title {
+	color: #fff;
+}
+.front-page .career .text {
+	margin: 0 0 52px;
+}
+.front-page .map {
+	position: relative;
+}
+.front-page .map #map {
+	height: 576px;
+}
+.front-page .map .content {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 122px;
+}
+.front-page .map .content .inner {
+	padding: 40px 0 62px;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.85);
+	border-bottom: 4px solid $a-color;
+
+}
+.front-page .map .content .logo {
+	background: url(../svg/logo-2.svg) center top no-repeat;
+	height: 33px;
+	margin-bottom: 37px;
+}
+.front-page .map .content .phone {
+	font-weight: 400;
+    margin-bottom: 8px;
+}
+.front-page .map .content .address {
+	margin-bottom: 22px;
 }
 

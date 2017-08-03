@@ -1,3 +1,8 @@
+footer {
+	padding: 21px 0;
+	color: #C4C4C4;
+	border-top: 2px solid $a-color;
+}
 .wrap-input-text {
 	position: relative;
 }
@@ -17,4 +22,66 @@
 	font-size: 10px;
 	top: 9px;
     letter-spacing: 1px;
+}
+.page {
+	padding: 82px 0 0;
+}
+.about-cooperation {
+	padding: 58px 0 61px;
+	background: #EEECEB;
+}
+.about-cooperation p {
+	margin-bottom: 30px;
+}
+.about-cooperation .bottom-border {	
+	position: relative;
+    padding: 59px 0 0;
+	border-bottom: 2px solid #D8DBCD;
+}
+.about-cooperation .bottom-border:before {	
+	content: '';
+	display: block;
+	position: absolute;
+	background: url(../svg/cutlery.svg) center center no-repeat #EEECEB;
+	width: 88px;
+	height: 40px;
+	bottom: -21px;
+	left: 50%;
+	margin-left: -44px;
+}
+
+
+.wrap-input-file {
+    position: relative;
+    border: 1px dashed #D8DBCD;
+    height: 80px;
+    line-height: 24px;
+    text-align: center;
+}
+.wrap-input-file .file-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 7px 0 0;
+}
+.wrap-input-file .file-name span {
+    color: $a-color;
+	text-decoration: underline;
+}
+.wrap-input-file .wrap-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.wrap-input-file .wrap-input input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include cros-opacity(0);
 }
