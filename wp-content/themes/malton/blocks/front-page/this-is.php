@@ -2,42 +2,27 @@
 	<h2 class="text-center main-title"><span>Группа компаний ЭДИСОН - это:</span></h2>
 	<div class="container">
 		<div class="items">
-			<div class="row">
-				<div class="col-xs-6">
-					<div class="row">
-						<div class="col-xs-9 col-xs-offset-3 item">
-							<h3>Надёжность</h3>
-							<p class="text">Идейные соображения высшего порядка, а также реализация намеченных плановых заданий позволяет оценить значение форм развития.</p>
+			<?php if( have_rows('this-is', 2) ): ?>
+				<div class="row">
+				<?php $i=0; while ( have_rows('this-is', 2) ) : the_row(); $i++;
+					$class="col-xs-9 col-xs-offset-3 item";
+					if($i==2) $class="col-xs-9 col-xs-offset-1 item";
+				?>
+					<div class="col-xs-6">
+						<div class="row">
+							<div class="<?php echo $class;?>">
+								<h3><?php the_sub_field('title'); ?></h3>
+								<p class="text"><?php the_sub_field('text'); ?></p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-xs-6">
-					<div class="row">
-						<div class="col-xs-9 col-xs-offset-1 item">
-							<h3>10 лет опыта</h3>
-							<p class="text">Идейные соображения высшего порядка, а также реализация намеченных плановых заданий позволяет оценить значение форм развития.</p>
-						</div>
+					<?php if($i==2) : $i=0; ?>
 					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-6">
 					<div class="row">
-						<div class="col-xs-9 col-xs-offset-3 item">
-							<h3>Скидки и акции</h3>
-							<p class="text">Идейные соображения высшего порядка, а также реализация намеченных плановых заданий позволяет оценить значение форм развития.</p>
-						</div>
-					</div>
+					<?php endif; ?>
+				<?php endwhile; ?>
 				</div>
-				<div class="col-xs-6">
-					<div class="row">
-						<div class="col-xs-9 col-xs-offset-1 item">
-							<h3>Популярность</h3>
-							<p class="text">Идейные соображения высшего порядка, а также реализация намеченных плановых заданий позволяет оценить значение форм развития.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>

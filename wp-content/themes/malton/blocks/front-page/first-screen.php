@@ -8,12 +8,12 @@
 							<img src="<?php echo get_bloginfo('template_url').'/svg/logo.svg'; ?>" alt="" />
 						</div>
 						<h1 class="tagline">
-							Ваш отдых — наша работа!
+							<?php the_field('first-screen-slogan', 2); ?>
 						</h1>
 						<div class="row">
 							<div class="col-xs-6 col-xs-offset-3">
 								<div class="text">
-									Группа компаний ЭДИСОН — это более 10-ти лет лидерства в ресторанном бизнесе и несколько успешных концептуальных проектов.
+									<?php the_field('first-screen-text', 2); ?>
 								</div>
 							</div>
 						</div>

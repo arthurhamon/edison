@@ -7,6 +7,7 @@
 					<div class="col-xs-12 text-center">
 						<div id="sliderScrollbar" class="content slider-wich-scrollbar">
 							<ul>
+								
 								<li>
 									<div class="item">
 										<div class="wrap-img">

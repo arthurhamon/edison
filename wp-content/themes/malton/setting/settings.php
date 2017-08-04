@@ -1,5 +1,11 @@
 <?php
 //get_template_part('blocks/front-page');
+function additional_mime_types( $mimes ) {
+	$mimes['svg'] = 'application/image/svg+xml';
+
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'additional_mime_types' );
 function setting_pre_get_posts_for_custom_post($query) {
 	
 	if ( ! is_admin() && $query->is_main_query() ) {

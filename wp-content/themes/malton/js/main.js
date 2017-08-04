@@ -1,4 +1,9 @@
+console.log(window.history);
 $('.scroll-to').scrollToAnim();
+$('.front-page .our-projects .items .item').on('mouseenter', function() {
+	$('.front-page .our-projects .hover-block .item').removeClass('active');
+	$($(this).attr('href')).addClass('active');
+});
 $(".fancybox-full-screen").fancybox({
 	width: "100%", 
 	height: "100%",

@@ -17,3 +17,31 @@
     <![endif]-->
   </head>
   <body>
+  <header class="text-center">
+	<div class="top-part">
+		<div class="vertical-bottom">
+			<a href="/" class="logo"><img src="<?php echo get_bloginfo('template_url').'/svg/logo-2.svg'; ?>" alt="" /></a>	
+		</div>
+	</div>
+	<div class="middle-part">
+		<div class="vertical-middle">
+			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'menu', 'menu_class' => '' ) ); ?>
+		</div>
+	</div>
+	<div class="bottom-part">
+		<div class="vertical-bottom">
+			<div class="h4 phone"><?php the_field('phone', 'options'); ?></div>
+			<p class="address"><?php the_field('address', 'options'); ?></p>
+			<a class="btn btn-red text-uppercase" href="#">Напишите нам</a>
+			<?php if( have_rows('social', 'options') ): ?>
+			<div class="social">
+				<?php while ( have_rows('social', 'options') ) : the_row(); ?>
+					<a href="<?php the_sub_field('href'); ?>"><i class="fa <?php the_sub_field('icon'); ?>" aria-hidden="true"></i></a>
+				<?php endwhile; ?>
+			</div>
+			<?php endif; ?>
+			<div class="copyright">© Калуга 2017<br />Сделано в Malton Tech.</div>
+		</div>
+	</div>
+  </header>
+  <div id="content">

@@ -136,13 +136,30 @@
 	background: #fff;
 	@include border-radius (50%);
 	@include cros-opacity(0);
-	@include animation-transition (0.2s, all);
+	@include animation-transition (1s, all);
+	padding: 90px 0 0;
+}
+.front-page .our-projects .hover-block .item .title {
+	position: relative;
+	padding: 0 0 22px;
+}
+.front-page .our-projects .hover-block .item .text {
+	padding: 0 0 22px;
+}
+.front-page .our-projects .hover-block .item .title:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 150px;
+    margin-left: -76px;
+    border-bottom: 2px solid #BD381F;
 }
 .front-page .our-projects .hover-block .item.active {
 	@include cros-opacity(1);	
 }
 .front-page .provider {
-	padding: 36px 0 78px;
+	padding: 90px 0 78px;
 }
 .front-page .provider .main-title {
 	margin-bottom: 55px;
