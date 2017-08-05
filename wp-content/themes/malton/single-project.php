@@ -15,7 +15,6 @@
 				</div>
 			</div>
 		</div>
-		<?php comments_template(); ?>
 	</div>
 	<?php endif; ?>
 <?php get_footer(); ?>

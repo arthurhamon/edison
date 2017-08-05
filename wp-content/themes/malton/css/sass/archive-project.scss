@@ -7,6 +7,11 @@
 .archive-project .item {
 	margin: 0 0 58px;
 }
+.archive-project .item .inner-href {
+	display: block;
+	text-decoration: none;
+	color: $main-color;
+}
 .archive-project .item .img {
 	height: 320px;
 }

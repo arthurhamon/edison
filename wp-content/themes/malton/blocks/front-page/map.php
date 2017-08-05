@@ -6,11 +6,13 @@
 				<div class="col-xs-3 col-xs-offset-9 no-p text-center">
 					<div class="inner">
 						<div class="logo"></div>
-						<div class="h4 phone">+7 (4842) 27-0000</div>
-						<p class="address">Россия, г. Калуга,<br />ул. Суворова, д.102а</p>
-						<a href="mainto:director@edisonproject.ru">director@edisonproject.ru</a><br />
-						<a href="mainto:ceo@edisonproject.ru">ceo@edisonproject.ru</a>
-
+						<div class="h4 phone"><?php the_field('phone', 'options'); ?></div>
+						<p class="address"><?php the_field('address', 'options'); ?></p>
+						<?php if( have_rows('emails', 'options') ): ?>
+						<?php while ( have_rows('emails', 'options') ) : the_row(); ?>
+						<a href="mainto:<?php the_sub_field('text'); ?>"><?php the_sub_field('text'); ?></a><br />
+						<?php endwhile; ?>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

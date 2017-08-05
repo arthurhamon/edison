@@ -1,0 +1,90 @@
+.single {
+	padding-bottom: 70px;
+}
+.single.has-img {
+	padding-top: 260px;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+.single .content {
+	background: #fff;
+}
+.single .content .text-in-block {
+	margin: 30px -8.33333333%;
+	background: #EEECEB;
+	padding: 55px 8.33333333%;
+}
+.single .content iframe {
+	margin: 0 -8.33333333% !important;
+	width: -webkit-fill-available;
+	height: 590px;
+}
+.single .content ol { counter-reset: item; }
+.single .content ol li { display: block; }
+.single .content ol li:before {
+	content: counter(item) ") ";
+	counter-increment: item;
+	color: $a-color;
+}
+
+.single .content ul li { display: block; }
+.single .content ul li:before {
+	content: "\2022\0020";
+	color: $a-color;
+}
+.single .comments-block {
+	padding-top: 60px;
+}
+.single .comments-block .comment-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+.single .comments-block .comment-list li .children {
+	list-style: none;
+	padding: 0 0 0 8.33333333%;
+	margin: 0;
+	display: block;
+}
+.single .comments-block .comment-list li {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.single .comments-block .comment-list li .item {
+	border: 1px solid #D8DBCD;
+	border-left: none;
+	border-right: none;
+	padding: 35px 0 25px;
+	margin: 60px 0;
+}
+.single .comments-block .comment-list li .item .author a {
+	color: #2C2929;
+	text-decoration: none;
+}
+.single .comments-block .comment-list li .item .comment-reply-link {
+	position: relative;
+}
+.single .comments-block .comment-list li .children .item .comment-reply-link {
+	display: none;
+}
+.single .comments-block .comment-list li .item .comment-reply-link:before {
+	position: absolute;
+    left: -20px;
+	content: "\f086";
+	display: inline-block;
+    font-family: FontAwesome;
+}
+.single .comments-block .comment-list li .item .comment-date {
+	color: #8F9280;
+}
+.single .comments-block .comment-respond textarea {
+	height: 180px;
+    resize: none;	
+}
+.single .comments-block .comment-respond #reply-title .wrap-a {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px
+}
