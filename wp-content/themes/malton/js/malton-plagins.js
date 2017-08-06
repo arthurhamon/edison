@@ -7,6 +7,10 @@
 		
 		var $this = this;
 		
+		var dataSetting = JSON.parse(JSON.stringify(this.data()));
+		//Заменяем настройки
+		settings = $.extend( settings, dataSetting);
+		
 		if(settings.responsivecountitem > 0) {
 			$( window ).resize(function() {
 				responsiveItems($this);

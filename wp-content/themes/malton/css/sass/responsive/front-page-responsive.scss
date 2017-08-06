@@ -1,0 +1,13 @@
+@media (max-width: $media-sm-min-width) {
+	.front-page .this-is .main-title span {
+		padding: 0 0 30px;
+	}
+	.front-page .career {
+		padding: 20px 0 20px;
+	}
+	.front-page .map .content {
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+}

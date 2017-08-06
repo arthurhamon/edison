@@ -19,14 +19,14 @@
 	width: -webkit-fill-available;
 	height: 590px;
 }
-.single .content ol { counter-reset: item; }
+.single .content ol { counter-reset: item; padding: 0; margin: 0; }
 .single .content ol li { display: block; }
 .single .content ol li:before {
 	content: counter(item) ") ";
 	counter-increment: item;
 	color: $a-color;
 }
-
+.single .content ul { padding: 0; margin: 0; }
 .single .content ul li { display: block; }
 .single .content ul li:before {
 	content: "\2022\0020";

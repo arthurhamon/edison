@@ -16,32 +16,42 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar" class="<?php if(wpmd_is_phone()) echo 'is-phone'; ?> <?php if(wpmd_is_tablet()) echo 'is-tablet'; ?>">
+  <div class="visible-xs visible-sm">
+	  <div class="wrap-mobile-menu" id="mobile-menu">
+		  <div class="mobile-menu text-center">
+				<div class="vertical-middle">
+					<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'menu', 'container_id' => 'navbar', 'menu_class' => '' ) ); ?>
+				</div>
+		  </div>
+	  </div>
+  </div>
   <header class="text-center">
 	<div class="top-part">
 		<div class="vertical-bottom">
-			<a href="/" class="logo"><img src="<?php echo get_bloginfo('template_url').'/svg/logo-2.svg'; ?>" alt="" /></a>	
+			<a href="/" class="logo hidden-xs hidden-sm"><img src="<?php echo get_bloginfo('template_url').'/svg/logo-2.svg'; ?>" alt="" /></a>	
+			<a href="/" class="logo"><img src="<?php echo get_bloginfo('template_url').'/svg/logo-3.svg'; ?>" alt="" /></a>	
 		</div>
 	</div>
 	<div class="middle-part">
-		<div class="vertical-middle">
-			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'menu', 'menu_class' => '' ) ); ?>
+		<a class="switch-mobile-menu visible-xs visible-sm" href="#mobile-menu"><div class="icon"><div class="middle-line"></div></div></a>
+		<div class="vertical-middle hidden-xs hidden-sm">
+			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'menu', 'container_id' => 'navbar', 'menu_class' => '' ) ); ?>
 		</div>
 	</div>
 	<div class="bottom-part">
-		<div class="vertical-bottom">
-			<div class="h4 phone"><?php the_field('phone', 'options'); ?></div>
-			<p class="address"><?php the_field('address', 'options'); ?></p>
-			<a class="btn btn-red text-uppercase" href="#">Напишите нам</a>
-			<?php if( have_rows('social', 'options') ): ?>
-			<div class="social">
-				<?php while ( have_rows('social', 'options') ) : the_row(); ?>
-					<a href="<?php the_sub_field('href'); ?>"><i class="fa <?php the_sub_field('icon'); ?>" aria-hidden="true"></i></a>
-				<?php endwhile; ?>
-			</div>
-			<?php endif; ?>
-			<div class="copyright">© Калуга 2017<br />Сделано в Malton Tech.</div>
+		<div class="h4 phone hidden-xs hidden-sm"><?php the_field('phone', 'options'); ?></div>
+		<p class="address hidden-xs hidden-sm"><?php the_field('address', 'options'); ?></p>
+		<a class="btn btn-red text-uppercase hidden-xs hidden-sm" href="#">Напишите нам</a>
+		<?php if( have_rows('social', 'options') ): ?>
+		<div class="social">
+			<?php while ( have_rows('social', 'options') ) : the_row(); ?>
+				<a href="<?php the_sub_field('href'); ?>"><i class="fa <?php the_sub_field('icon'); ?>" aria-hidden="true"></i></a>
+			<?php endwhile; ?>
 		</div>
+		<?php endif; ?>
+		<a class="btn btn-red text-uppercase visible-xs visible-sm" href="#"><i class="fa fa-comment" aria-hidden="true"></i></a>
+		<div class="copyright hidden-xs hidden-sm">© Калуга 2017<br />Сделано в Malton Tech.</div>
 	</div>
   </header>
   <div id="content">

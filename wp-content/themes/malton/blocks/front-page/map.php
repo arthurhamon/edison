@@ -1,9 +1,8 @@
 <div class="map">	
-	<div id="map" lat="54.513319" lng="36.246725" placemark="<?php echo get_bloginfo('template_url'); ?>/img/placemark.png" placemark-width="35" placemark-height="48"></div>
 	<div class="content">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-3 col-xs-offset-9 no-p text-center">
+				<div class="col-sm-3 col-sm-offset-9 col-xs-12 no-p yes-p-xs text-center">
 					<div class="inner">
 						<div class="logo"></div>
 						<div class="h4 phone"><?php the_field('phone', 'options'); ?></div>
@@ -18,4 +17,5 @@
 			</div>
 		</div>
 	</div>
+	<div id="map" lat="54.513319" lng="36.246725" placemark="<?php echo get_bloginfo('template_url'); ?>/img/placemark.png" placemark-width="35" placemark-height="48"></div>
 </div>

@@ -1,0 +1,13 @@
+@media (max-width: $media-md-min-width) {	
+	.single .comments-block .comment-list li .children {
+		padding-left: 0;
+	}
+}
+@media (max-width: $media-sm-min-width) {
+	.single .comments-block .comment-list li .item .comment-reply-link {
+		padding-left: 20px;
+	}
+	.single .comments-block .comment-list li .item .comment-reply-link:before {
+		left: 0;
+	}
+}

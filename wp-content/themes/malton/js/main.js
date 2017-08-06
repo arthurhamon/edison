@@ -1,4 +1,3 @@
-console.log(window.history);
 $('.scroll-to').scrollToAnim();
 $('.front-page .our-projects .items .item').on('mouseenter', function() {
 	$('.front-page .our-projects .hover-block .item').removeClass('active');
@@ -22,9 +21,7 @@ $(".fancybox").fancybox({
 $(window).load(
 	function() {	
 		$('#preloader').hide();
-		$('#sliderScrollbar').sliderScrollbar({
-			responsivecountitem: 4,
-		});
+		$('#sliderScrollbar').sliderScrollbar();
 		fullWindowHeight();
 		$('.front-page .provider .wrap-jcarousel').wrapJcarousel();		
 	}
@@ -61,8 +58,6 @@ $('.wrap-input-text input').focusout(function() {
 		$(this).parents('.wrap-input-text').removeClass('is-focus');
 	}
 });
-
-
 //Для Fancybox Закрываем fancybox после отправки сообщения
 var timerMultiFancyboxClose;
 function fancyboxClose() {
@@ -76,3 +71,20 @@ function runMultipleFancyboxClose()
 		$.fancybox.open('<div class="fancybox-message">'+text+'</div>');
 	}
 }
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+//Показываем мобальное меню
+$('.switch-mobile-menu').on('click', function() {
+	var $this = $(this);
+	if($this.hasClass('active')) {
+		$this.removeClass('active');
+		$($this.attr('href')).hide('slide', {direction: "left"});
+	} else {
+		$this.addClass('active');
+		$($this.attr('href')).show('slide', {direction: "left"});
+	}
+});

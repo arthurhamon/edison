@@ -1,4 +1,4 @@
-<div class="full-window-height first-screen">
+<div class="full-window-height first-screen" id="about">
 	<div class="wrap-vertical-position">
 		<div class="vertical-middle">
 			<div class="container">
@@ -11,7 +11,7 @@
 							<?php the_field('first-screen-slogan', 2); ?>
 						</h1>
 						<div class="row">
-							<div class="col-xs-6 col-xs-offset-3">
+							<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
 								<div class="text">
 									<?php the_field('first-screen-text', 2); ?>
 								</div>
