@@ -15,7 +15,8 @@ $(".fancybox-full-screen").fancybox({
 });
 $(".fancybox").fancybox({
 	margin: [0,0 ,0, 0],
-	padding: [40, 40, 0, 0],
+	padding: [0, 0, 0, 0],
+	minWidth: 500,
 });
 //Для инициализации плагинов которым важно дождаться загрузки картинок
 $(window).load(
@@ -47,13 +48,13 @@ $('body').on('change', '.wrap-input-file input[type="file"]', function (event, f
 });
 
 //Плейсхолдер меняется при фокусе на инпут
-$('.wrap-input-text .placeholder').click(function(){
+$('body').on('click', '.wrap-input-text .placeholder', function() {
 	$(this).parents('.wrap-input-text').find('input').focus();
 });
-$('.wrap-input-text input').focusin(function() {
+$('body').on('focusin', '.wrap-input-text input', function() {
 	$(this).parents('.wrap-input-text').addClass('is-focus');
 });
-$('.wrap-input-text input').focusout(function() {
+$('body').on('focusout', '.wrap-input-text input', function() {
 	if($(this).val() == '') {
 		$(this).parents('.wrap-input-text').removeClass('is-focus');
 	}

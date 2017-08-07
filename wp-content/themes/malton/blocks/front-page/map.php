@@ -1,8 +1,8 @@
-<div class="map">	
+<div class="map" id="contacts">	
 	<div class="content">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-3 col-sm-offset-9 col-xs-12 no-p yes-p-xs text-center">
+				<div class="col-md-3 col-md-offset-9 col-sm-4 col-sm-offset-8 col-xs-12 no-p yes-p-xs text-center">
 					<div class="inner">
 						<div class="logo"></div>
 						<div class="h4 phone"><?php the_field('phone', 'options'); ?></div>

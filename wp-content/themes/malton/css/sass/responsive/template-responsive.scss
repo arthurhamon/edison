@@ -1,3 +1,6 @@
+.visible-mobile-header {
+	display: none !important;
+}
 @media (max-width: 1272px) {
 	#content {
 		padding: 0 0 0 70px;
@@ -14,5 +17,15 @@
 	header .social {
 		margin-bottom: 0;
 		padding: 0;
+	}
+	header .social:before {
+		display: none;
+	}
+	
+	.hidden-mobile-header {
+		display: none !important;
+	}
+	.visible-mobile-header {
+		display: block !important;
 	}
 }

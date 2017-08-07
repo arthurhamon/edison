@@ -65,6 +65,7 @@ header .menu ul li {
 	padding: 0;
 }
 header .menu ul li a {
+	position: relative;
 	display: block;
 	margin: 0;
 	padding: 13px 0;
@@ -73,6 +74,19 @@ header .menu ul li a {
 }
 header .menu ul li.active a {
 	background: #EEECEB;
+}
+header .menu ul li.active a:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 9px 9px 9px 0;
+	border-color: transparent #bd371f transparent transparent;
+	top: 50%;
+	right: 0;
+	margin-top: -9px;
 }
 
 header .menu ul li a:hover {
@@ -238,4 +252,10 @@ footer {
 }
 .mobile-menu ul li.active a {
     background: #EEECEB;
+}
+.fancybox-form {
+	background: url(../img/fence-2-bg.png) center top no-repeat;
+    background-size: cover;
+	padding: 40px;
+	border: 1px solid #2C2929;
 }

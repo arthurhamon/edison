@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<div class="wrap-jcarousel" data-responsivecountitem="1" data-wrap="circular">
+				<div class="wrap-jcarousel" data-responsivecountitem="<?php if(wpmd_is_phone()) echo 1; else echo 4; ?>" data-wrap="circular">
 					<div class="row">
 						<div class="col-xs-10 col-xs-offset-1 no-p">
 							<div class="jcarousel">
