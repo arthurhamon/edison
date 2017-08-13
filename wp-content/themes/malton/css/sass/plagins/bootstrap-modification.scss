@@ -117,6 +117,7 @@ a.btn {
   text-transform: uppercase;
   letter-spacing: 1.3px;
   font-size: 16px;
+  @include animation-transition (0.3s, all);
 }
 .btn.btn-block {
 	padding-left: 0;
@@ -269,9 +270,9 @@ a.btn {
   border-color: #fff;
 }
 .btn-transparent-white:hover {
-  color: #fff;
-  background-color: $main-color;
-  border-color: $main-color;
+  color: #333;
+  background-color: #fff;
+  border-color: #fff;
 }
 .btn-transparent-white:active,
 .btn-transparent-white.active,

@@ -17,11 +17,16 @@
     <![endif]-->
   </head>
   <body data-spy="scroll" data-target="#navbar" class="<?php if(wpmd_is_phone()) echo 'is-phone'; ?> <?php if(wpmd_is_tablet()) echo 'is-tablet'; ?>">
+  <div id="loader"></div>
   <div class="visible-mobile-header">
 	  <div class="wrap-mobile-menu" id="mobile-menu">
 		  <div class="mobile-menu text-center">
 				<div class="vertical-middle">
+					<?php if(is_front_page()) : ?>
 					<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'menu', 'container_id' => 'navbar', 'menu_class' => '' ) ); ?>
+					<?php else : ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'inner-menu', 'container_class' => 'menu', 'container_id' => 'navbar', 'menu_class' => '' ) ); ?>
+					<?php endif; ?>
 				</div>
 		  </div>
 	  </div>
@@ -36,7 +41,11 @@
 	<div class="middle-part">
 		<a class="switch-mobile-menu visible-mobile-header" href="#mobile-menu"><div class="icon"><div class="middle-line"></div></div></a>
 		<div class="vertical-middle hidden-mobile-header">
-			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'menu', 'container_id' => 'navbar', 'menu_class' => '' ) ); ?>
+			<?php if(is_front_page()) : ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'menu wrap-scroll-to', 'container_id' => 'navbar', 'menu_class' => '' ) ); ?>
+			<?php else : ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'inner-menu', 'container_class' => 'menu wrap-scroll-to', 'container_id' => 'navbar', 'menu_class' => '' ) ); ?>
+			<?php endif; ?>
 		</div>
 	</div>
 	<div class="bottom-part">
@@ -54,4 +63,4 @@
 		<div class="copyright hidden-mobile-header">© Калуга 2017<br />Сделано в Malton Tech.</div>
 	</div>
   </header>
-  <div id="content">
+  <div class="main-content">

@@ -46,6 +46,10 @@
 
 				
 			<?php
+			$comment_field_class = 'col-sm-4 col-xs-12';
+			if(is_user_logged_in()) {
+				$comment_field_class = 'col-sm-6 col-xs-offset-3 col-xs-12';
+			}
 			$submit_button_under_text_class = 'col-sm-8 col-sm-offset-2 col-xs-12';
 			$defaults = array(
 				'logged_in_as'         => '<div class="container"><div class="row">',
@@ -55,27 +59,36 @@
 						<div class="row">
 							<div class="col-sm-4 col-sm-offset-2 col-xs-12">
 								<div class="form-group">
-									<div class="wrap-form-control">' .
-										'<input id="author" class="form-control big-height" placeholder="Введите ваше имя *" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . $html_req . ' />
+									<div class="wrap-input-text">
+										<div class="wrap-form-control">' .
+											'<input id="author" class="form-control big-height" placeholder="Введите ваше имя *" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . $html_req . ' />
+											<div class="placeholder">Ваше имя <span>*</span></div>
+										</div>
 									</div>
 								</div>',
 								
 								'email'  => '
 								<div class="form-group">
-									<div class="wrap-form-control">' .
-										'<input id="email" class="form-control big-height" name="email" placeholder="Введите ваш email *" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $aria_req . $html_req  . ' />
+									<div class="wrap-input-text">
+										<div class="wrap-form-control">' .
+											'<input id="email" class="form-control big-height" name="email" placeholder="Введите ваш email *" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $aria_req . $html_req  . ' />
+											<div class="placeholder">Ваш email <span>*</span></div>
+										</div>
 									</div>
 								</div>',
 								
 								'url'  => '
 								<div class="form-group">
+									<div class="wrap-input-text">
 									<div class="wrap-form-control">' .
 										'<input id="url" class="form-control big-height" name="url" placeholder="Ваш сайт, если есть" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30" aria-describedby="url-notes"' . $aria_req . $html_req  . ' />
+											<div class="placeholder">Ваш сайт</div>
+									</div>
 									</div>
 								</div>
 								</div>',
 					),
-				'comment_field'        => '<div class="col-sm-4 col-xs-12"><div class="form-group"><textarea placeholder="Текст вашего комментария. Есть возможность использования тэгов html для выделения текста, такие как <b>, <i>, <strong> и т.д." id="comment" class="form-control big-height" name="comment"  aria-required="true" required="required"></textarea></div>',
+				'comment_field'        => '<div class="'.$comment_field_class.'"><div class="form-group"><textarea placeholder="Текст вашего комментария. Есть возможность использования тэгов html для выделения текста, такие как <b>, <i>, <strong> и т.д." id="comment" class="form-control big-height" name="comment"  aria-required="true" required="required"></textarea></div>',
 				'must_log_in'          => '<p class="must-log-in">' . sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
 				'comment_notes_before' => '',
 				'comment_notes_after'  => '',
@@ -92,7 +105,7 @@
 				'label_submit'         => 'комментировать',
 				'class_submit'         => 'btn btn-block text-uppercase btn-lg btn-green',
 				'name_submit'          => 'submit',
-				'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" /></div><div class="'.$submit_button_under_text_class.' comment-respond-message"><span>Внимание!</span> Все комментарии проходят ручную модерацию и появляются не сразу. Убедительная просьюа не дублировать их. Спасибо за понимание.</div>',
+				'submit_button'        => '<div class="form-group"><input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" /></div></div><div class="'.$submit_button_under_text_class.' comment-respond-message"><span>Внимание!</span> Все комментарии проходят ручную модерацию и появляются не сразу. Убедительная просьюа не дублировать их. Спасибо за понимание.</div>',
 				'submit_field'         => '%1$s %2$s</div></div>',
 				'format'               => 'xhtml',
 			);

@@ -1,6 +1,10 @@
 .container {
 	//width: 1164px !important;
 }
+html {
+	position: relative;
+	min-height: 100%;
+}
 body {
 	//font-family: 'Podkova', serif;
 	font-family: 'PT Sans', sans-serif;
@@ -11,6 +15,7 @@ body {
 	background: #fff;	
 	//background: url(../img/template-main.png) center -694px no-repeat #fff;
 	//height: 6000px;
+	margin-bottom: 70px;
 }
 a {
 	color: $a-color;

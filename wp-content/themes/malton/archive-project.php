@@ -33,7 +33,7 @@
 						<div class="row">
 							<div class="col-sm-7 col-xs-12"><a href="<?php the_permalink(); ?>">Подробнее о проекте</a></div>
 							<?php if(get_field('site-href')) : ?>
-							<div class="col-sm-5 col-xs-12 text-right text-left-xs"><a href="<?php the_field('site-href'); ?>"><?php the_field('site'); ?></a></div>
+							<div class="col-sm-5 col-xs-12 text-right text-left-xs"><a class="site" target="_blank" href="<?php the_field('site-href'); ?>"><?php the_field('site'); ?></a></div>
 							<?php endif; ?>
 						</div>
 					</div>

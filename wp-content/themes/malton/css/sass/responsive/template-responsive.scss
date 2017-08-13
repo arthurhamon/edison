@@ -2,8 +2,8 @@
 	display: none !important;
 }
 @media (max-width: 1272px) {
-	#content {
-		padding: 0 0 0 70px;
+	.main-content {
+		padding-left: 70px;
 	}
 	header {
 		width: 70px;

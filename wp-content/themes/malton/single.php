@@ -1,7 +1,10 @@
 <?php get_header(); ?>	
 	<?php if ( have_posts() ) : the_post(); ?>
-	<div class="single <?php if(has_post_thumbnail()) echo 'has-img'; ?>" <?php if(has_post_thumbnail()) echo 'style="background-image: url('.get_the_post_thumbnail_url( get_the_ID(), 'full' ).')"'; ?>>
-		<div class="container">
+	<div class="single <?php if(has_post_thumbnail()) echo 'has-img'; ?>">
+		<?php if(has_post_thumbnail()) : ?>
+		<div class="main-img" data-stellar-background-ratio="0.5" <?php if(has_post_thumbnail()) echo 'style="background-image: url('.get_the_post_thumbnail_url( get_the_ID(), 'full' ).')"'; ?>></div>
+		<?php endif; ?>
+		<div class="container wrap-content">
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="content page">

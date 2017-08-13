@@ -1,5 +1,5 @@
 	</div>
-	<footer><div class="container text-right">© ГРУППА КОМПАНИЙ «ЭДИСОН» – 2011-2017</div></footer>
+	<footer class="main-content"><div class="container text-center">© ГРУППА КОМПАНИЙ «ЭДИСОН» – 2011-2017</div></footer>	
 	<?php wp_footer(); ?>
 	<div style="display: none;">
 		<div id="contact-us" class="fancybox-form">

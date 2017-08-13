@@ -62,7 +62,7 @@ function theme_name_scripts() {
 	//wp_enqueue_script( 'fullPage', get_template_directory_uri() . '/js/fullpage/jquery.fullPage.js' );
 	
 	//Паралакс плагин
-	//wp_enqueue_script( 'stellar', get_template_directory_uri() . '/js/jquery.stellar-paralax.min.js' );	
+	wp_enqueue_script( 'stellar', get_template_directory_uri() . '/js/jquery.stellar-paralax.min.js' );	
 	
 	//Скроллбар
 	//wp_enqueue_script( 'jscrollpane', get_template_directory_uri() . '/js/jquery.jscrollpane.min.js' );	

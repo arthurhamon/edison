@@ -117,6 +117,9 @@
 .front-page .our-projects .items .item:hover:before {
 	@include cros-opacity(0);
 }
+.front-page .our-projects .items .item.active:before {
+	@include cros-opacity(0);
+}
 .front-page .our-projects .items .item.left-part {
 	padding-left: 38px;
 }
@@ -146,6 +149,7 @@
 	@include cros-opacity(0);
 	@include animation-transition (1s, all);
 	padding: 90px 0 0;
+	z-index: 1;
 }
 .front-page .our-projects .hover-block .item .title {
 	position: relative;
@@ -164,6 +168,7 @@
     border-bottom: 2px solid #BD381F;
 }
 .front-page .our-projects .hover-block .item.active {
+	z-index: 2;
 	@include cros-opacity(1);	
 }
 .front-page .provider {
@@ -295,5 +300,8 @@
 }
 .front-page .map .content .address {
 	margin-bottom: 22px;
+}
+.front-page .docs {
+	
 }
 

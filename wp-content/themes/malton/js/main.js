@@ -1,8 +1,5 @@
 $('.scroll-to').scrollToAnim();
-$('.front-page .our-projects .items .item').on('mouseenter', function() {
-	$('.front-page .our-projects .hover-block .item').removeClass('active');
-	$($(this).attr('href')).addClass('active');
-});
+$('.wrap-scroll-to a').scrollToAnim();
 $(".fancybox-full-screen").fancybox({
 	width: "100%", 
 	height: "100%",
@@ -21,7 +18,7 @@ $(".fancybox").fancybox({
 //Для инициализации плагинов которым важно дождаться загрузки картинок
 $(window).load(
 	function() {	
-		$('#preloader').hide();
+		$('#loader').fadeOut();
 		$('#sliderScrollbar').sliderScrollbar();
 		fullWindowHeight();
 		$('.front-page .provider .wrap-jcarousel').wrapJcarousel();		
@@ -74,6 +71,41 @@ function runMultipleFancyboxClose()
 }
 
 
+$('.front-page .our-projects .items .item').on('mouseenter', function() {
+	//Меняем на #54514F
+	if($('.front-page .our-projects .items .item.active .logo').length) {
+		changeAttrSvg($('.front-page .our-projects .items .item.active .logo').get(0), 'fill', "#54514F");
+	}
+	
+	
+	$('.front-page .our-projects .items .item').removeClass('active');
+	$(this).addClass('active');
+	$('.front-page .our-projects .hover-block .item').removeClass('active');
+	$($(this).data('href')).addClass('active');
+	
+	
+	//Меняем на белый цвет
+	/*var logo = $(this).find(".logo").get(0);
+	var svgDocument = logo.contentDocument;
+	var elements = svgDocument.getElementsByTagName("use");
+	for(var i=0; i<elements.length; i++) {
+		if ( elements[i].getAttribute( 'fill' ) != undefined) {
+			elements[i].setAttribute("fill", "#fff");
+		}
+	}*/
+	changeAttrSvg($(this).find(".logo").get(0), 'fill', "#fff");
+});
+function changeAttrSvg(obj, attr, val) {
+	var svgDocument = obj.contentDocument;
+	var elements = svgDocument.getElementsByTagName("use");
+	for(var i=0; i<elements.length; i++) {
+		if ( elements[i].getAttribute( attr ) != undefined) {
+			elements[i].setAttribute(attr, val);
+		}
+	}
+}
+
+
 
 
 /*-------------------------------------------------------------------------------------------------------*/
@@ -89,3 +121,5 @@ $('.switch-mobile-menu').on('click', function() {
 		$($this.attr('href')).show('slide', {direction: "left"});
 	}
 });
+//Паралакс
+$('body').stellar({horizontalScrolling: false, });
